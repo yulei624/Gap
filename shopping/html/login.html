@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login页面</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1634356_kggqdpn8nfm.css">
+</head>
+
+<body>
+    <!-- 头部 start -->
+    <div id="header"></div>
+    <!-- 头部 end -->
+    <!-- 注册登录 start -->
+    <div class="login">
+        <div class="loginId" id="loginId">
+            <span class="borderBottom aa sp1" onclick="registLogin(1)">短信快捷登录/注册</span>
+            <span class="borderDown aa sp2" onclick="registLogin(2)">账号密码登陆</span>
+        </div>
+        <div class="loginLeft">
+            <div class="loginText">
+                <p>新会员注册成功后，可获赠10元无门槛会员欢迎礼券及首单双倍积分！</p>
+                <p>*新会员欢迎礼券将在1-2日送达您的帐户</p>
+            </div>
+            <div class="inputBox">
+                <span class="wordName">手机号</span>
+                <input id="ip1" onblur="blurF(1)" class="inputName" type="text" placeholder="请输入手机号">
+                <p class="hideText p1">请输入手机号码</p>
+                <p class="hideText p2">输入的手机号码有误</p>
+            </div>
+            <div class="inputBox">
+                <span class="wordName">图形验证码</span>
+                <input id="ip2" onblur="blurF(2)"  class="inpName" type="text" placeholder="请输入右侧图片中的验证码">
+                <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAAoCAIAAAC6iKlyAAACzklEQVR42u3avS4FQRQA4PsCOi2NeAGd9noIkUg8gRdQ3YdQ3YpIdBIUKgqlioSGSqHwBBoFk0wyjtmZM+dvZveymxOhcXe/PTnnzMydfI1Xk2sy8Ptberiw/YdXG7fwz+nlgTgWElrzwM2whpLR9R7Y5bUytV0iR7k8lg77MqIkvr+59vFfoGXWMuWAq/RdVGiuNUvZHJcEfbL+mItefJe3j3KhKcpVcbPQCG5f3IgvIo4Ti3Hnm6dIUKFZym2sWcrBOqmszFycmMKtgnYxn00HBQ3z2rAs0KFz1lpoF4fP5y6cOIweoV2Y11wWdNI6C83tjZ77585+u8MXsHX3HoIOrW+PLaG71glo5POKxdpzQ/H4jmdTCI2nP0IWagIR+nP1xQqa+A4waMpHErsiwt3N6FzuUxpaEdoRB+Wd410fAmhuvmsXLKzxI5ngxNLhuSFupO8n5SS0X9Q43yAr89UUlqbQyQQvQiPTQsh3R+x/6So3kB0uNORGoInTgp+Uc53QJbJ/B+Z72aw+2Sc0q3TIRj3Y9Ly1+7n2sW8SYmU2tMn6EELjIwpsXyziaBOqErRwwSJTVkLnema3yLLWhNFVA1q+BG+jjJeOXILnpgsitzm0YF9pUkMZUmqC0vpYqW3VHlW7d4a5bAXtstspRzkeFiCyJbjeWrtNalgxrKDPnt6KIbPWcAuUC9DiumxbOkIW5zZSktCUlzQI6Hqb/cU5Otq5785tEXcxo+vN0dozw6pHKjg0VIb7QchGyqJC1z64ykHD41ScmFI6hg7d4HgwCd0lJu7fU5qhLbRBjW5zCJublKNyXBwhkPFuZe+1GOLJTwstPjMkvonwhBAagRAfGIYXU9xIkVn3Cc3KIOLunVKZfrrGnbKHntFtoImHD5rUHqFJzZOe4DnrvwZNF5f1ZIp40tp+Cf5PLpxb/x34EZrHPUI3upTWI3Sj6xvkwLwaOquYugAAAABJRU5ErkJggg=="
+                    alt="">
+                <span class="shuaiX">刷新</span>
+                <p class="hideText p3">请输入图形验证码运算结果</p>
+                <p class="hideText p4">输运算结果有误</p>
+            </div>
+            <div class="inputBox">
+                <span class="wordName">验证码</span>
+                <input id="ip3" onblur="blurF(3)" class="inpName" type="text" placeholder="请输入短信验证码">
+                <button class="inputBtn">发送验证码</button>
+                <p class="hideText p5">请输入6位短信验证码</p>
+                <p class="hideText p6">输入的6位验证码有误</p>
+            </div>
+            <div>
+                <button class="loginBtn">登录</button>
+            </div>
+            <div class="inputBox inpLast">
+                <span class="wordName">第三方登录</span>
+                <i class="iconfont icon-weixin"></i>
+                <i class="iconfont icon-QQ"></i>
+            </div>
+        </div>
+
+
+        <div class="loginRight">
+            <div class="inputBox rightBox">
+                <span class="wordName">账号</span>
+                <input id="ip4" onblur="blurF(4)" class="inputName" type="text" placeholder="请输入帐号">
+                <p class="hideText p7">请输入手机号/邮箱</p>
+                <p class="hideText p8">输入有误请重新输入</p>
+            </div>
+            <div class="inputBox rightBox">
+                <span class="wordName">密码</span>
+                <input id="ip5" onblur="blurF(5)" class="inputName" type="text" placeholder="请输入10位数字密码">
+                <p class="hideText p9">请输入密码</p>
+                <p class="hideText p10">输入密码有误</p>
+            </div>
+            <div class="callMe">
+                <input type="checkbox">
+                <span>记住我</span>
+                <a onclick="openOther()" href="javascript:;">忘记密码</a>
+            </div>
+            <div>
+                <button class="loginBtn">登录</button>
+            </div>
+            <div class="inputBox inpLast">
+                <span class="wordName">第三方登录</span>
+                <i class="iconfont icon-weixin"></i>
+                <i class="iconfont icon-QQ"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="hideLogin">
+        <div class="centerBox">
+            <span class="centerTitle">验证手机</span>
+            <div class="centerBox1">
+                <span class="wName">手机号</span>
+                <input id="it1" onblur="blurF(6)" class="centerName" type="text" placeholder="请输入手机号">
+                <p class="hiText ht1">请输入手机号码</p>
+                <p class="hiText ht2">输入手机号码有误</p>
+            </div>
+            <div class="centerBox1">
+                <span class="wName">图形验证码</span>
+                <input id="it2" onblur="blurF(7)" class="iName" type="text" placeholder="请输入右侧图片中的验证码">
+                <img src="data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAAoCAIAAAC6iKlyAAACzklEQVR42u3avS4FQRQA4PsCOi2NeAGd9noIkUg8gRdQ3YdQ3YpIdBIUKgqlioSGSqHwBBoFk0wyjtmZM+dvZveymxOhcXe/PTnnzMydfI1Xk2sy8Ptberiw/YdXG7fwz+nlgTgWElrzwM2whpLR9R7Y5bUytV0iR7k8lg77MqIkvr+59vFfoGXWMuWAq/RdVGiuNUvZHJcEfbL+mItefJe3j3KhKcpVcbPQCG5f3IgvIo4Ti3Hnm6dIUKFZym2sWcrBOqmszFycmMKtgnYxn00HBQ3z2rAs0KFz1lpoF4fP5y6cOIweoV2Y11wWdNI6C83tjZ77585+u8MXsHX3HoIOrW+PLaG71glo5POKxdpzQ/H4jmdTCI2nP0IWagIR+nP1xQqa+A4waMpHErsiwt3N6FzuUxpaEdoRB+Wd410fAmhuvmsXLKzxI5ngxNLhuSFupO8n5SS0X9Q43yAr89UUlqbQyQQvQiPTQsh3R+x/6So3kB0uNORGoInTgp+Uc53QJbJ/B+Z72aw+2Sc0q3TIRj3Y9Ly1+7n2sW8SYmU2tMn6EELjIwpsXyziaBOqErRwwSJTVkLnema3yLLWhNFVA1q+BG+jjJeOXILnpgsitzm0YF9pUkMZUmqC0vpYqW3VHlW7d4a5bAXtstspRzkeFiCyJbjeWrtNalgxrKDPnt6KIbPWcAuUC9DiumxbOkIW5zZSktCUlzQI6Hqb/cU5Otq5785tEXcxo+vN0dozw6pHKjg0VIb7QchGyqJC1z64ykHD41ScmFI6hg7d4HgwCd0lJu7fU5qhLbRBjW5zCJublKNyXBwhkPFuZe+1GOLJTwstPjMkvonwhBAagRAfGIYXU9xIkVn3Cc3KIOLunVKZfrrGnbKHntFtoImHD5rUHqFJzZOe4DnrvwZNF5f1ZIp40tp+Cf5PLpxb/x34EZrHPUI3upTWI3Sj6xvkwLwaOquYugAAAABJRU5ErkJggg=="
+                    alt="">
+                <span class="shuaiX">刷新</span>
+                <p class="hiText ht3">请输入图形验证码运算结果</p>
+                <p class="hiText ht4">输入运算结果有误</p>
+            </div>
+            <div class="centerBox1">
+                <span class="wName">验证码</span>
+                <input id="it3" onblur="blurF(8)" class="iName" type="text" placeholder="请输入短信验证码">
+                <button class="inputBtn">发送验证码</button>
+                <p class="hideText ht5">请输入短信验证码</p>
+                <p class="hideText ht6">输入验证码有误</p>
+            </div>
+            <div>
+                <button onclick="nextGo()" class="nextBtn">下一步</button>
+            </div>
+        </div>
+        <div class="centerItem">
+            <span class="centerTitle">验证手机</span>
+            <i onclick="closeOther()" class="iconfont icon-cha"></i>
+            <div class="centerBox1">
+                <span class="wName">输入密码</span>
+                <input id="one" onblur="blurF(9)" class="centerName" type="text" placeholder="请输入密码">
+                <p class="hiText text1">请输入密码</p>
+                <p class="hiText text2">输入的密码有误</p>
+            </div>
+            <div class="centerBox1">
+                <span class="wName">确认新密码</span>
+                <input id="two" onblur="blurF(10)" class="centerName" type="text" placeholder="请输入新密码">
+                <p class="hiText text3">请再次输入新密码</p>
+                <p class="hiText text4">两次输入的密码有误</p>
+            </div>
+            <div>
+                <button class="lastBtn">完成并登录</button>
+            </div>
+        </div>
+    </div>
+    <!-- 注册登录 end -->
+    <!-- 底部 start -->
+    <div id="footer"></div>
+    <!-- 底部 end -->
+</body>
+<script src="../js/jQuery-1.11.3.js"></script>
+<script>
+ $(".loginBtn").click(function () {
+        // -----这三个是 获取短信快捷登录的三个input框的内容
+        let valA = $("#ip1").val();
+        let valB = $("#ip2").val();
+        let valC = $("#ip3").val();
+        // -----这二个是 获取账号密码登录的二个input框的内容
+        let valD = $("#ip4").val();
+        let valE = $("#ip5").val();
+        // -----这三个是 获取短信快捷登录的三个input框有没有红色边框的class类名
+        let text1 = $("#ip1").hasClass('borderRed')
+        let text2 = $("#ip2").hasClass('borderRed')
+        let text3 = $("#ip3").hasClass('borderRed')
+        // -----这三个是 获取账号密码登录的二个input框有没有红色边框的class类名
+        let text4 = $("#ip4").hasClass('borderRed')
+        let text5 = $("#ip5").hasClass('borderRed')
+        // -----获取 短信快捷登录这个span标签是否有下边框这个class类名，如果有，走第一个，没有走else
+        let textActive = $(".sp1").hasClass('borderBottom')
+        // -----先判断是走短信快捷登录 还是 账号密码登录
+        if (textActive) {
+            // -----短信快捷登录注册-----
+            if ((valA !== '' & valB !== '' && valC !== '') && !(text1 || text2 || text3)) {
+                window.location.href = "../html/myIndex.html"
+            }
+        } else {
+            // -----账号密码登录-----
+            if ((valD !== '' & valE !== '') && !(text4 || text5)) {
+                window.location.href = "../html/myIndex.html"
+            }
+        }
+    })
+
+
+
+
+
+
+</script>
+<script>
+    $("#header").load("../common/header.html")
+    $("#footer").load("../common/footer.html")
+
+    function registLogin(value) {
+        $(".aa").removeClass("borderBottom");
+        if (value === 1) {
+            $(".loginLeft").css("display", "block");
+            $(".loginRight").css("display", "none");
+            $(".sp1").addClass("borderBottom")
+            $(".sp1").removeClass("borderDown")
+        }
+        else if (value === 2) {
+            $(".loginRight").css("display", "block");
+            $(".loginLeft").css("display", "none");
+            $(".sp2").addClass("borderBottom")
+            $(".sp1").addClass("borderDown")
+        }
+    }
+
+    function openOther() {
+        $(".loginRight").css("display", "none");
+        $(".hideLogin").css("display", "block");
+        $(".centerBox").css("display", "block");
+    }
+
+    function nextGo() {
+        $(".hideLogin").css("display", "block");
+        $(".centerBox").css("display", "none");
+        $(".centerItem").css("display", "block");
+    }
+
+    function closeOther() {
+        $(".hideLogin").css("display", "none");
+        $(".centerItem").css("display", "none");
+        $(".loginRight").css("display", "block");
+    }
+
+    function blurF(value) {
+        if(value===1){
+            let val = $("#ip1").val()
+            if(val===''){
+                $("#ip1").addClass("borderRed")
+                $(".p1").show()
+                $(".p2").hide()
+            }
+            else if(!(/^1[34578]\d{9}$/.test(val)) && val!==''){
+                $("#ip1").addClass("borderRed")
+                $(".p2").show()
+                $(".p1").hide()
+            }
+            else{
+                $("#ip1").removeClass("borderRed")
+                $(".p2").hide()
+                $(".p1").hide()
+            }
+        }
+        else if(value===2){
+            let val = $("#ip2").val()
+            if(val===''){
+                $("#ip2").addClass("borderRed")
+                $(".p3").show()
+                $(".p4").hide()
+            }
+            else if( val!=="5" && val!==''){
+                $("#ip2").addClass("borderRed")
+                $(".p4").show()
+                $(".p3").hide()
+            }
+            else{
+                $("#ip2").removeClass("borderRed")
+                $(".p4").hide()
+                $(".p3").hide()
+            }
+        }
+        else if(value===3){
+            let val = $("#ip3").val()
+            if(val===''){
+                $("#ip3").addClass("borderRed")
+                $(".p5").show()
+                $(".p6").hide()
+            }
+            else if( !(/\d{6}/.test(val)) && val!==''){
+                $("#ip3").addClass("borderRed")
+                $(".p6").show()
+                $(".p5").hide()
+            }
+            else{
+                $("#ip3").removeClass("borderRed")
+                $(".p6").hide()
+                $(".p5").hide()
+            }
+        }
+        else if(value===4){
+            let val = $("#ip4").val();
+            if(val===''){
+                $("#ip4").addClass("borderRed")
+                $(".p7").show();
+                $(".p8").hide();
+            }
+            else if(val!=='' &&
+                ((/^1[34578]\d{9}$/.test(val)) || /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(val))){
+                $("#ip4").removeClass("borderRed")
+                $(".p8").hide();
+                $(".p7").hide();
+            }
+            else{
+                $("#ip4").addClass("borderRed")
+                $(".p7").hide()
+                $(".p8").show()
+            }
+        }
+        else if(value===5){
+            let val = $("#ip5").val();
+            if(val===''){
+                $("#ip5").addClass("borderRed")
+                $(".p9").show();
+                $(".p10").hide();
+            }
+            else if(val!=='' && !(/\d{10}/.test(val))){
+                $("#ip5").addClass("borderRed")
+                $(".p10").show();
+                $(".p9").hide();
+            }
+            else{
+                $("#ip5").removeClass("borderRed")
+                $(".p9").hide()
+                $(".p10").hide()
+            }
+        }
+        if(value===6){
+            let val = $("#it1").val()
+            if(val===''){
+                $("#it1").addClass("borderRed")
+                $(".ht1").show()
+                $(".ht2").hide()
+            }
+            else if(!(/^1[34578]\d{9}$/.test(val)) && val!==''){
+                $("#it1").addClass("borderRed")
+                $(".ht2").show()
+                $(".ht1").hide()
+            }
+            else{
+                $("#it1").removeClass("borderRed")
+                $(".ht2").hide()
+                $(".ht1").hide()
+            }
+        }
+        else if(value===7){
+            let val = $("#it2").val()
+            if(val===''){
+                $("#it2").addClass("borderRed")
+                $(".ht3").show()
+                $(".ht4").hide()
+            }
+            else if( val!=="5" && val!==''){
+                $("#it2").addClass("borderRed")
+                $(".ht4").show()
+                $(".ht3").hide()
+            }
+            else{
+                $("#it2").removeClass("borderRed")
+                $(".ht4").hide()
+                $(".ht3").hide()
+            }
+        }
+        else if(value===8){
+            let val = $("#it3").val()
+            if(val===''){
+                $("#it3").addClass("borderRed")
+                $(".ht5").show()
+                $(".ht6").hide()
+            }
+            else if( !(/\d{6}/.test(val)) && val!==''){
+                $("#it3").addClass("borderRed")
+                $(".ht6").show()
+                $(".ht5").hide()
+            }
+            else{
+                $("#it3").removeClass("borderRed")
+                $(".ht6").hide()
+                $(".ht5").hide()
+            }
+        }
+        else if(value===9){
+            let val = $("#one").val();
+            let val1 = $("#two").val();
+            if(val===''){
+                $("#one").addClass("borderRed")
+                $(".text1").show();
+                $(".text2").hide();
+            }
+            else if(val!=='' && val1!=='' && val !==val1){
+                $("#one").addClass("borderRed")
+                $("#two").addClass("borderRed")
+                $(".text2").show();
+                $(".text1").hide();
+            }
+            else{
+                $("#one").removeClass("borderRed")
+                $("#two").removeClass("borderRed")
+                $(".text2").hide();
+                $(".text1").hide();
+                $(".text3").hide();
+                $(".text4").hide();
+            }
+        }
+        else if(value===10){
+            let val = $("#one").val();
+            let val1 = $("#two").val();
+            if(val1===''){
+                $("#two").addClass("borderRed")
+                $(".text3").show();
+                $(".text4").hide();
+            }
+            else if(val!=='' && val1!=='' && val !==val1){
+                $("#one").addClass("borderRed")
+                $("#two").addClass("borderRed")
+                $(".text4").show();
+                $(".text3").hide();
+            }
+            else{
+                console.log(2222)
+                $("#one").removeClass("borderRed")
+                $("#two").removeClass("borderRed")
+                $(".text3").hide();
+                $(".text4").hide();
+                $(".text2").hide();
+                $(".text1").hide()
+            }
+        }
+    }
+
+
+
+</script>
+
+</html>

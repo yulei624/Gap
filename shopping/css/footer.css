@@ -1,0 +1,228 @@
+.footer{
+    background-color: rgb(13,35,71);
+    height: 88px;
+    text-align: center;
+}
+.footer>.newPaper{
+    width: 1125px;
+    display: inline-block;
+    padding: 24px 0;
+}
+.footer>.newPaper>div{
+    display: inline-block;
+    float: left;
+}
+.footer>.newPaper>.firstNews{
+    display: inline-block;
+    color: #fff;
+    margin-right: 16px;
+}
+.footer>.newPaper>.firstNews>p{
+    text-align: left;
+    height: 20px;
+}
+.footer>.newPaper>.firstNews>p:nth-child(2){
+    font-weight: 600;
+}
+.footer>.newPaper>.userId{
+    position: relative;
+    margin-right: 55px;
+}
+.footer>.newPaper>.userId>input{
+    width: 380px;
+    height: 40px;
+    outline-style: none;
+    padding:0 12px;
+    border-radius: 3px;
+    border: 0px;
+}
+.footer>.newPaper>.userId>::-webkit-input-placeholder{
+    color: rgb(218,218,218);;
+}
+.footer>.newPaper>.userId>i{
+    position: absolute;
+    font-size: 24px;
+    right: 0;
+    top: 8px;
+}
+.footer>.newPaper>.contentUs{
+    position: relative;
+}
+.footer>.newPaper>.contentUs>.hideDiv{
+    position: absolute;
+    bottom: -165px;
+    right: 0;
+    display: none;
+    background-color: #fff;
+}
+.footer>.newPaper>.contentUs>.hideDiv>img{
+    width: 100px;
+    height: 100px;
+    padding-top: 15px;
+}
+.footer>.newPaper>.contentUs>.hideDiv>p{
+    font-size: 12px;
+    padding: 5px 10px 10px ;
+}
+.footer>.newPaper>.contentUs>span{
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+}
+.footer>.newPaper>.contentUs>a{
+    display: inline-block;
+    float: right;
+    height: 40px;
+    padding-left: 15px;
+}
+.footer>.newPaper>.contentUs>a>i{
+    font-size: 40px;
+    color:#fff;
+}
+.footer>.newPaper>.serviceTime{
+    float: right;
+    font-size: 13px;
+    color: #fff;
+    position: relative;
+}
+.footer>.newPaper>.serviceTime>a{
+    color: #fff;
+    display: inline-block;
+    width: 128px;
+    text-align: right;
+}
+.footer>.newPaper>.serviceTime>.hideBox{
+    position: absolute;
+    right: 0;
+    width: 282px;
+    height: 115px;
+    background-color: #fff;
+    font-size: 13px;
+    padding: 10px;
+    line-height: 20px;
+    color: rgb(77, 72, 72);
+    bottom: -156px;
+    display: none;
+}
+
+
+.footerText{
+    width: 1125px;
+    margin: 0 auto;
+    padding: 26px 118px 0px 106px;
+    display: flex;
+}
+.footerText>div{
+    display: inline-block;
+}
+.footerText>.firstBox{
+    width: 123px;
+    height: 267px;
+}
+.footerText>div>span{
+    display: block;
+    height: 16px;
+    font-size: 14px;
+    margin: 0 0 15px;
+    font-weight: bold;
+}
+.footerText>.firstBox>a{
+    display: block;
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+    padding: 8px 0;
+    color: rgb(71, 64, 64);
+}
+.secondBox{
+    width: 238px;
+}
+.secondBox>p{
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px;
+}
+.secondBox>p:nth-child(2n+1){
+    color: gray;
+    padding-bottom: 8px;
+}
+.secondBox>p:nth-child(2n){
+   padding-top: 8px;
+}
+.thirdBox{
+    width: 232px;
+    margin-right: 47px;
+}
+.thirdBox>img{
+    width:232px;
+    height: 135px;
+}
+.thirdBox>a{
+    display: inline-block;
+    padding: 5px 11px;
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+.thirdBox>p{
+    font-size: 12px;
+    padding: 14px 0 8px;
+}
+.serviceGo{
+    width: 227px;
+}
+.serviceGo>.Go1{
+    display: inline-block;
+    padding: 5px 11px;
+    font-size: 12px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 42px;
+}
+.serviceGo>span:nth-child(2){
+    display: block;
+    height: 16px;
+    font-size: 14px;
+    margin: 0 0 15px;
+    font-weight: bold;
+}
+.footerLast{
+    padding-top: 20px;
+}
+.footerLast>p{
+    text-align: center;
+    font-size: 12px;
+}
+.footerLast>p:nth-child(2){
+    line-height: 20px;
+    margin-bottom: 15px;
+}
+.footerLast>p>a{
+    display: inline-block;
+    color: black;
+}
+.footerLast>p>a>img{
+    width: 20px;
+    height: 20px;
+}
+.footerLast>p:nth-child(1){
+    margin-bottom: 8px;
+}
+.footerLast>p:nth-child(3){
+    margin-bottom: 8px;
+}
+.footerLast>p:nth-child(3)>a{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+

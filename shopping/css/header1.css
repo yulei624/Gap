@@ -1,0 +1,35 @@
+.wraper1{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 2px solid #ccc;
+}
+.header{
+    width: 1200px;
+    margin: 0 auto;
+    height: 41px;
+    line-height: 41px;
+    padding: 16px 0;
+    text-align: center;
+}
+.hd1{
+    font-size: 14px;
+    float: left;
+}
+.hd1>a{
+    color: #333;
+}
+.hd2{
+    display: inline-block;
+    width: 55px;
+    height: 40px;
+}
+.hd3{
+    font-size: 14px;
+    float: right;
+}
+.hd3>span:nth-child(1){
+    margin-right: 30px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="a">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <button id="btn">按钮</button>
+</body>
+<script src="../js/jQuery-1.11.3.js"></script>
+<script>
+    
+    $("#btn").click(function(){
+        var key=5;
+        if(key==9){
+            key=0;
+        }
+        var $li="<li>"+key+++"</li><li>"+key+++"</li><li>"+key+++"</li><li>"+key+++"</li><li>"+key+++"</li>"
+        $("#a").empty().append($li)
+     
+        // $("#a").empty()
+        // for(let i=5;i<10;i++){
+        //     $("#a").append("<li>"+i+"</li>")
+        // }
+    })
+
+</script>
+</html>

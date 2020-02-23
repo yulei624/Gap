@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付 二维码页面</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/pay.css">
+    <link rel="stylesheet" href="http:">
+    <script src="../js/jQuery-1.11.3.js"></script>
+</head>
+
+<body>
+    <!-- 头部 start -->
+    <div id="header1"></div>
+    <!-- 头部 end -->
+    <div class="wraper">
+        <div class="w1200">
+            <div class="w980">
+                <h3 class="w980_title">请及时付款，以便订单及时处理</h3>
+                <p class="title_text">下单后8小时内未付款，订单将自动取消，请尽快完成支付。</p>
+                <div class="QRcode">
+                    <div class="QRcode_left">
+                        <img src="../imgs/ORcode.png" alt="">
+                        <p>应付金额：¥ 322.50</p>
+                    </div>
+                    <div class="QRcode_right">
+                        <p>请使用手机支付宝，扫描二维码进行支付。</p>
+                        <p>或者您也可以：</p>
+                        <p>前往<a href="">支付宝网站</a>付款或<a id="open_other_pay" href="javascript:;">选择其他方式</a></p>
+                    </div>
+                </div>
+                <div class="w948">
+                    <ul class="order_text">
+                        <li>订单号：120021910122636233<span class="li_right">等待付款</span></li>
+                        <li>配送地址：张婉莹 18338687156 新疆维吾尔自治区乌鲁木齐市沙依巴克区不晓得</li>
+                        <li>支付方式：<span>支付宝</span></li>
+                        <li>订单总额：￥<span>322.50</span></li>
+                    </ul>
+                </div>
+                <div class="shop">
+                    <div class="shop_1">
+                        <img src="https://uxresources.baozun.com/prod/88000136/20190906/B4D82FDD437EB6894C5F9B024A8890C8.JPG?x-oss-process=image/resize,m_pad,w_80,h_106"
+                            alt="">
+                        <div class="shop_right">
+                            <p><span>Gap</span><span>￥148.00</span><span>x1</span><span>小计:￥148.00</span></p>
+                            <p>男装|长袖套头卫衣连帽衫</p>
+                            <p>海军蓝、175/92A(S)</p>
+                        </div>
+                    </div>
+                    <div style="margin: 16px 0;" class="shop_1">
+                        <img src="https://uxresources.baozun.com/prod/88000136/20200215/A9C3BCA30BFE6EA8B553A463E1BE85B7.jpg?x-oss-process=image/resize,m_pad,w_80,h_106"
+                            alt="">
+                        <div class="shop_right">
+                            <p><span>Gap</span><span>￥174.50</span><span>x1</span><span>小计:￥174.50</span></p>
+                            <p>男装|徽标LOGO休闲毛圈布内里套头卫衣</p>
+                            <p>麻灰色、175/92A(S)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="orderAll">
+                    <div class="rightBox">
+                        <div class="rb2">
+                            商品总额
+                            <span id="all_money">332.50</span><span>￥</span>
+                        </div>
+                        <div class="rb3">
+                            优惠<i class="iconfont icon-wenhao"></i>
+                            <span>-￥0.00</span>
+                        </div>
+                        <div class="rb4">
+                            <span>运费</span>
+                            <span>免运费</span>
+                        </div>
+                        <div class="rb5">
+                            订单总金额
+                            <span>￥332.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 遮罩层 end-->
+    <div class="hideGary">
+        <div class="other_pay">
+            <span class="buyFour_close">X</span>
+            <div class="w2_buyFour">
+                <div>
+                    <input type="radio" name="zhifu" checked="true">
+                    <img src="../imgs/zhifubao.png" alt="">
+                    <span>支付宝</span>
+                </div>
+                <div>
+                    <input type="radio" name="zhifu">
+                    <img src="../imgs/weixinzhifu.png" alt="">
+                    <span>微信</span>
+                </div>
+                <div>
+                    <input type="radio" name="zhifu">
+                    <img src="../imgs/lipingka.png" alt="">
+                    <span>Gap礼品卡支付</span>
+                </div>
+                <div>
+                    <input type="radio" name="zhifu">
+                    <img src="../imgs/lipingka.png" alt="">
+                    <span>Old Navy礼品卡支付</span>
+                </div>
+            </div>
+            <div class="look"><a href="">查看礼品卡说明</a><a href="">查询余额</a></div>
+            <div style="text-align: center;"><button class="last_btn">立即支付</button></div>
+        </div>
+
+    </div>
+    <!-- 遮罩层 end-->
+    <!-- 底部 start -->
+    <div id="footer"></div>
+    <!-- 底部 end -->
+</body>
+
+</html>
+<script>
+    $("#header1").load("../common/header1.html")
+    $("#footer").load("../common/footer.html")
+
+    $("#open_other_pay").click(function(){
+        $(".hideGary").show()
+        $(".other_pay").show()
+        $("body").addClass("over_hidden")
+    })
+    $(".buyFour_close").click(function(){
+        $(".hideGary").hide()
+        $(".other_pay").hide()
+        $("body").removeClass("over_hidden")
+    })
+    $(".last_btn").click(function(){
+       setTimeout(function(){
+        $(".hideGary").hide()
+        $(".other_pay").hide()
+        $("body").removeClass("over_hidden")
+       },800)
+    })
+
+
+</script>

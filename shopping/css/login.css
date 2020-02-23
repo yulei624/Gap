@@ -1,0 +1,306 @@
+.login{
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px 0 0;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+.login>.loginId{
+    display: flex;
+    margin-top: 10px;
+}
+.login>.loginId>span{
+    font-size: 18px;
+    display: inline-block;
+    width: 50%;
+    padding: 12px 0;
+    text-align: center;
+}
+.login>.loginId>span:hover{
+    cursor: pointer;
+}
+
+.borderDown{
+    border-bottom: 2px solid #ccc;
+}
+
+.login>.loginLeft{
+    margin-top: 10px ;
+    /* display: none; */
+}
+.login>.loginLeft>.loginText{
+    height: 60px;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+.login>.loginLeft>.loginText>p{
+    font-size: 14px;
+}
+.login>.loginLeft>.inputBox{
+    height: 76px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.wordName{
+    display: block;
+    font-size:14px ;
+    height: 40px;
+    line-height: 40px;
+}
+.inputName{
+    width: 374px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+}
+.inpName{
+    width: 222px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+}
+.login>.loginLeft>.inputBox>img{
+    width: 96px;
+    height: 34px;
+    position: absolute;
+    right: 40px;   
+}
+.shuaiX{
+    height: 36px;
+    line-height: 36px;
+    display: block;
+    float: right;
+    font-size: 14px;
+    color: #ccc;
+}
+.shuaiX:hover{
+    cursor: pointer;
+}
+.inputBtn{
+    width: 140px;
+    height: 36px;
+    border: 1px solid black;
+    margin-left: 5px;
+    border-radius: 3px;
+}
+.inputBtn:hover{
+    cursor: pointer;
+}
+.loginBtn{
+    margin-top: 30px;
+    width: 400px;
+    height: 40px;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    background-color: rgb(18,33,76);
+}
+.loginBtn:hover{
+    cursor: pointer;
+}
+.inpLast{
+    margin: 10px 0 0 ;
+    margin-bottom: 0!important
+}
+.inpLast>i{
+    font-size: 30px;
+}
+.inpLast>i:hover{
+    cursor: pointer;
+}
+.icon-weixin{
+    color: rgb(102, 212, 102);
+}
+.icon-QQ{
+    margin-left: 10px;
+    color: rgb(104, 165, 225);
+}
+
+.hideText{
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    color: rgb(237, 64, 64);
+    display: none;
+}
+
+.loginRight{
+    margin-top: 20px;
+    display: none;
+}
+.loginRight>.rightBox{
+    position: relative;
+    margin-top: 30px;
+}
+
+.callMe{
+    margin-top: 40px;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+}
+.callMe>input{
+    width: 14px;
+    height: 14px;
+}
+.callMe>span{
+    margin-left: 10px;
+}
+.callMe>a{
+    display: inline-block;
+    float: right;
+    text-decoration: underline;
+    color: #000;
+}
+
+
+.hideLogin{
+    display: none;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.centerBox{
+    width: 346px;
+    height: 392px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 32px;
+    margin-top: 20px;
+    border-radius: 5px;
+    display: none;
+}
+.centerTitle{
+    display: block;
+    width: 346px;
+    height: 20px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hideLogin>.centerBox>.centerBox1{
+    height: 76px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.hideLogin>.centerBox>.centerBox1>.wName{
+    display: block;
+    font-size:14px ;
+    height: 40px;
+    line-height: 40px;
+}
+.hideLogin>.centerBox>.centerBox1>.centerName{
+    width: 320px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+}
+.hideLogin>.centerBox>.centerBox1>.hiText{
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    color: rgb(237, 64, 64);
+    display: none;
+}
+.iName{
+    width: 168px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+}
+.hideLogin>.centerBox>.centerBox1>img{
+    width: 96px;
+    height: 34px;
+    position: absolute;
+    right: 40px; 
+}
+.nextBtn{
+    width: 346px;
+    height: 36px;
+    background-color: rgb(18,33,76);
+    border-radius: 3px;
+    color: #fff;
+    border: 0;
+    margin-top: 24px;
+}
+
+.centerItem{
+    width: 346px;
+    height: 300px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 32px;
+    margin-top: 100px;
+    border-radius: 5px;
+    position: relative;
+    display: none;
+}
+.centerItem>i{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+}
+.centerItem>i:hover{
+    cursor: pointer;
+}
+.centerItem>.centerBox1>.centerName{
+    width: 320px;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    outline: none;
+}
+.centerItem>.centerBox1>.wName{
+    display: block;
+    font-size:14px ;
+    height: 40px;
+    line-height: 40px;
+}
+.centerBox1{
+    margin-top: 20px;
+    position: relative;
+}
+.centerItem>.centerBox1>.hiText{
+    position: absolute;
+    font-size: 12px;
+    bottom: -20px;
+    color: rgb(237, 64, 64);
+    display: none;
+}
+.lastBtn{
+    width: 346px;
+    height: 36px;
+    background-color: rgb(18,33,76);
+    border-radius: 3px;
+    color: #fff;
+    border: 0;
+    margin-top: 40px;
+}
+.lastBtn:hover{
+    cursor: pointer;
+}
+
+
+
+
+.borderBottom{
+    border-bottom:2px solid black ;
+}
+.borderRed{
+    border: 1px solid red!important
+}
+

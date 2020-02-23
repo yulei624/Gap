@@ -1,0 +1,171 @@
+.trunk{
+    width: 1200px;
+    margin: 20px auto 40px;
+
+}
+.cenTer{
+
+}
+.newText{
+    padding: 25px 0;
+}
+.newText>span:nth-child(1){
+   font-size: 24px;
+   font-weight: 600;
+}
+.newText>span:nth-child(2){
+    font-size: 14px;
+    margin-left: 16px;
+ }
+
+ .shop{
+     overflow: hidden;
+ }
+ .shop>.shopLeft{
+     float: left;
+    width: 180px;
+    height: 451px;
+    padding: 16px 0 0;
+    border-top: 1px solid #ccc;
+ }
+ .shop>.shopRight{
+     float: right;
+     width: 1020px;
+ }
+ .shop>.shopLeft>.shL1{
+    font-size: 14px;
+    height: 16px;
+    margin-bottom: 16px;
+ }
+ .shL1>.sLbox{
+    float: right;
+ }
+ .sLbox>span{
+     cursor: pointer;
+ }
+ .shop>.shopLeft>.shL2{
+    
+ }
+ .shop>.shopLeft>.shL2>a{
+     display: block;
+     font-size: 14px;
+     color: #666;
+     height: 16px;
+     padding: 0 0 16px 9px;
+ }
+ .shop>.shopLeft>.shL3{
+    border-top: 1px solid #ccc;
+    font-size: 14px;
+    height: 16px;
+    padding-top: 10px;
+    margin-bottom: 16px;
+ }
+ .shop>.shopLeft>.shL3>span{
+     color: #666;
+ }
+ .shop>.shopLeft>.shL3>.sLbox{
+    float: right;
+ }
+
+.moneyDown{
+    text-align: center;
+    padding-top: 30px;
+}
+.price_slider{
+    padding-top: 40px;
+}
+.moneyDown>input{
+    padding: 0 14px;
+    width: 45px;
+    height: 20px;
+}
+
+.paiX{
+    font-size: 14px;
+}
+.paiX>input{
+    width: 16px;
+    height: 16px;
+    margin-left: 30px;
+    
+}
+.px{
+    float: right;
+    position: relative;
+}
+.px1,.px2{
+    display: inline-block;
+    padding:0 10px;
+}
+.px2,.sLbox1,.sLbox3{
+    display: none;
+}
+.px>.pxx{
+    cursor: pointer;
+}
+.items{
+    width: 114px;
+    right: 0;
+    font-size: 14px;
+    position: absolute;
+    top: 25px;
+    border: 1px solid #ccc;
+    display: none;
+    background-color: #fff;
+}
+
+.items>div{
+    padding: 8px 0;
+    text-align: center;
+}
+
+.items>div:hover{
+    cursor: pointer;
+    background-color: rgb(245,245,245);
+}
+.showBox{
+    display: flex;
+    padding-top: 24px;
+}
+.showBox>div{
+    display: inline-block;
+    padding-left: 24px;
+    padding-bottom: 25px;
+}
+.showBox>div>a{
+    display: inline-block;
+    width: 230px;
+}
+.showBox>div>a>img{
+    width: 230px;
+    height: 300px;
+}
+.showBox>div>a>p{
+    font-size: 14px;
+    padding: 0 10px;
+    color: #000;
+    padding-top: 5px;
+}
+.showBox>div>div{
+    width: 230px;
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+.showBox>div>div>span:nth-child(1){
+    font-size: 14px;
+    padding: 0 10px 0;
+}
+.showBox>div>div>span:nth-child(2){
+    font-size: 12px;
+    text-decoration: line-through;
+    color: #666;
+}
+.showBox>div>span{
+    font-size: 12px;
+    padding-left: 12px;
+    color: rgb(4,47,106);
+}
+
+
+
+

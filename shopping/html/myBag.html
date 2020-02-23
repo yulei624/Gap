@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哦，我的购物袋</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/myBag.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1641042_bnco91ofnrl.css">
+    <script src="../js/jQuery-1.11.3.js"></script>
+</head>
+
+<body>
+    <!-- 头部 start -->
+    <div id="header"></div>
+    <!-- 头部 end -->
+
+
+    <div class="wraper">
+        <!-- 标题 我的购物袋 start -->
+        <div class="title">
+            <span>我的购物袋 </span>
+            <span class="many">[共 <span>0</span> 件商品]</span>
+        </div>
+        <!-- 标题 我的购物袋 end -->
+        <!-- ---------------左边部分----start-------------- -->
+        <div class="myShoping">
+            <!-- 商品属性 数量 价格 start -->
+            <div class="mySh1">
+                <input class="input1 inputs" type="checkbox" name="checked" id="inputs1">
+                <span class="all1">全选</span>
+                <span class="all2">商品属性</span>
+                <span>数量</span>
+                <span>金额</span>
+            </div>
+            <!-- 商品属性 数量 价格 end -->
+            <!-- CAP 小logo start-->
+            <div class="mySh2">
+                <img src="data:image/png;base64,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"
+                    alt="">
+            </div>
+            <!-- CAP 小logo end-->
+            <!-- 第一个商品 start -->
+            <div class="trueShop1">
+                <input type="checkbox" name="check" class="inputs" id="inputs2">
+                <img src="https://uxresources.baozun.com/prod/88000136/20200213/15011A5ECF940E76F15A7B68D1072A8D.jpg"
+                    alt="">
+                <ul>
+                    <li>Gap</p>
+                    <li>男装|棉质舒适翻领夹克外套</li>
+                    <li>颜色：<span>浅棕色</span></li>
+                    <li>尺码：<span id="ma1">175/94A(L)</span></li>
+                    <li>￥<span id="d299">299.50</span><span class="yuanjia">￥599.00</span></li>
+                    <li class="changeOther">
+                        <span class="change"><i class="iconfont icon-bianji1"></i> 编辑</span>
+                        <span class="remove"><i class="iconfont icon-shangchu"></i> 删除</span>
+                        <div class="changeOther_children">
+                            <div class="children_item1">
+                                <span>颜色：</span><span>浅棕色</span>
+                                <div id="littleImg1" class="smallImg_border">
+                                    <img src="https://uxresources.baozun.com/prod/88000136/20200213/15011A5ECF940E76F15A7B68D1072A8D.jpg?x-oss-process=image/resize,m_mfit,h_24,w_24/rotate,180/crop,h_24/rotate,180"
+                                        alt="">
+                                </div>
+                            </div>
+                            <div class="children_item2">
+                                <div>尺码：<span id="ma2">175/94A(L)</span>
+                                </div>
+                                <ul id="ul1">
+                                    <li>170/72A(XS)</li>
+                                    <li>170/76A(S)</li>
+                                    <li>175/84A(M)</li>
+                                    <li class="rgb1">175/94A(L)</li>
+                                    <li>180/104A(XL)</li>
+                                </ul>
+                            </div>
+                            <div class="children_item3">
+                                <button class="item3_btn1">取消</button>
+                                <button class="item3_btn2">确定</button>
+                            </div>
+                            <div class="posi">请选择尺码</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="number">
+                    <div class="threeSp">
+                        <span id="jian">-</span><span id="nuB">1</span><span id="add">+</span>
+                        <div class="threeBox">单件商品最多购买三件</div>
+                    </div>
+                </div>
+                <div class="total">
+                    ￥<span class="total_span1">299.50</span>
+                </div>
+
+            </div>
+            <!-- 第一个商品 end -->
+            <!-- 第二个商品 start -->
+            <div class="trueShop1">
+                <input type="checkbox" name="check" class="inputs" id="inputs3">
+                <img src="https://uxresources.baozun.com/prod/88000136/20200120/3BDF297138E33A94DA86C8319F88397F.jpg"
+                    alt="">
+                <ul>
+                    <li>Gap</li>
+                    <li>女装|徽标LOGO棉质毛圈布套头连帽衫</li>
+                    <li>颜色：<span>海军蓝色</span></li>
+                    <li>尺码：<span>170/100A(L)</span></li>
+                    <li>￥<span id="d174">174.50</span><span class="yuanjia">￥349.00</span></li>
+                    <li>
+                        <span class="change"><i class="iconfont icon-bianji1"></i> 编辑</span>
+                        <span class="remove"><i class="iconfont icon-shangchu"></i> 删除</span>
+                    </li>
+                </ul>
+                <div class="number1">
+                    <div class="threeSp1"><span id="jian1">-</span><span id="nuB1">1</span><span id="add1">+</span>
+                    </div>
+                </div>
+                <div class="total">
+                    ￥<span class="total_span2">174.50</span>
+                </div>
+
+            </div>
+            <!-- 第二个商品 end -->
+        </div>
+        <!-- ---------------左边部分----end-------------- -->
+        <!-- ---------------右边部分----start-------------- -->
+        <div class="rightBox">
+            <div class="rb1">
+                订单摘要
+                <span>已选<span id="all_number">0</span>件商品</span>
+            </div>
+            <div class="rb2">
+                商品总额
+                <span id="all_money">0.00</span><span>￥</span>
+            </div>
+            <div class="rb3">
+                优惠
+                <span>￥0.00</span>
+            </div>
+            <div class="rb4">
+                <input type="text" placeholder="请输入优惠码或选择优惠券">
+                <span>使用</span>
+            </div>
+            <div class="rb5">
+                订单总金额
+                <span>￥0.00</span>
+            </div>
+            <div class="rb6">
+                <button id="hhhh">立即结算</button>
+            </div>
+            <div class="rb7">
+                <button id="goOnBuy">继续购物</button>
+            </div>
+        </div>
+        <div class="last">
+            <div class="last1">
+                <div class="aaa bbb1">需要帮助?<span class="click1">+</span><span class="click2">—</span></div>
+                <div class="show1">
+                    <p><i class="iconfont icon-htmal5icon31"></i> <span> 在线客服 </span><span>(服务时间:10:00-22:00)</span></p>
+                    <p>售后服务热线</p>
+                    <p>400-680-8517 <span class="fwTime">(服务时间:10:00-19:00)</span></p>
+                </div>
+            </div>
+            <div class="last1">
+                <div class="aaa bbb2">支付方式<span class="click3">+</span><span class="click4">—</span></div>
+                <div class="show2">
+                    <span><i style="color: rgb(30,149,212); font-size: 20px;" class="iconfont icon-zhifubao"></i>
+                        支付宝</span>
+                    <span style="display: block;"><i style="color: rgb(0,183,0);font-size: 20px;"
+                            class="iconfont icon-weixinzhifu1"></i> 微信</span>
+                    <span><i style="color: rgb(18,33,71);font-size: 20px;" class="iconfont icon-shinshoplipinqia"></i>
+                        礼品卡</span>
+                </div>
+            </div>
+            <div class="last1">
+                <div class="aaa bbb3">退换货政策<span class="click5">+</span><span class="click6">—</span></div>
+                <div class="show3">
+                    <p>我们提供完善的售后服务，承诺自顾客签收商品之日（以签收快递日期为准）起15天内（减价商品和正价商品)，如对商品有任何不满意，我们将提供无理由退换货服务。以初上市吊牌价销售的商品退换货费用全免（不包括参与限时促销的正价商品和减价商品）。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- ---------------右边部分----end-------------- -->
+
+
+
+
+    </div>
+    <!-- 底部 start -->
+    <div id="footer"></div>
+    <!-- 底部 end -->
+
+</body>
+<script>
+    $("#header").load("../common/header2.html")
+    $("#footer").load("../common/footer.html")
+
+    // ----------第一个数量--加减--start
+    var num = 1;
+    $("#add").click(function () {
+        num++;
+        if (num > 3) {
+            $(".threeBox").show();
+            setTimeout(function () {
+                $(".threeBox").hide();
+            }, 2500)
+            num = 3;
+        }
+        $("#nuB")[0].innerText = num
+
+        if ($("input[name=check]")[0].checked) {
+            // $("#all_money")[0].innerText = $('.total_span1')[0].innerText * $("#nuB")[0].innerText
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+            $("#all_money")[0].innerText = $('.total_span1')[0].innerText
+        } else {
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+        }
+        // if ($("input[name=check]")[0].checked && $("input[name=check]")[1].checked){
+        //     $("#all_money")[0].innerText = $('.total_span1')[0].innerText * $("#nuB")[0].innerText
+        // }
+    })
+    $("#jian").click(function () {
+        num--;
+        if (num < 1) { num = 1 }
+        $("#nuB")[0].innerText = num
+        if ($("input[name=check]")[0].checked) {
+            // $("#all_money")[0].innerText = $('.total_span1')[0].innerText * $("#nuB")[0].innerText
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+            $("#all_money")[0].innerText = $('.total_span1')[0].innerText
+        } else {
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+        }
+        // if ($("input[name=check]")[0].checked && $("input[name=check]")[1].checked){
+        //     $("#all_money")[0].innerText = $('.total_span1')[0].innerText * $("#nuB")[0].innerText
+        // }
+    })
+    // ----------第一个数量--加减--end
+
+    // ----------第二个数量--加减--start
+    var key = 1;
+    $("#add1").click(function () {
+        key++;
+        if (key > 3) {
+            $(".threeBox").show();
+            setTimeout(function () {
+                $(".threeBox").hide();
+            }, 2500);
+            key = 3
+        }
+        $("#nuB1")[0].innerText = key
+
+        // $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+        // $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+
+
+        if ($("input[name=check]")[1].checked) {
+            // $("#all_money")[0].innerText = $('.total_span2')[0].innerText * $("#nuB1")[0].innerText
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+            $("#all_money")[0].innerText = $('.total_span2')[0].innerText
+        } else {
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+        }
+        // if ($("input[name=check]")[0].checked && $("input[name=check]")[1].checked){
+        //     $("#all_money")[0].innerText = $('.total_span1')[0].innerText * $("#nuB")[0].innerText
+        // }
+    })
+    $("#jian1").click(function () {
+        key--;
+        if (key < 1) { key = 1 }
+        $("#nuB1")[0].innerText = key
+
+        // $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+        // $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+
+
+        if ($("input[name=check]")[1].checked) {
+            // $("#all_money")[0].innerText = $('.total_span2')[0].innerText * $("#nuB1")[0].innerText
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+            $("#all_money")[0].innerText = $('.total_span2')[0].innerText
+        } else {
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+        }
+
+    })
+    if ($("input[name=check]")[0].checked && $("input[name=check]")[1].checked) {
+        $("#all_money")[0].innerText = $('.total_span1')[0].innerText * $("#nuB")[0].innerText
+    }
+    // ----------第二个数量--加减--end
+
+
+
+    // ----------第一个 加减号---start
+    $(".bbb1").click(function () {
+        $(".click1").toggle()
+        $(".click2").toggle()
+        $(".show1").toggle()
+    })
+    // ----------第一个 加减号---end
+
+    // ----------第二个 加减号---start
+    $(".bbb2").click(function () {
+        $(".click3").toggle()
+        $(".click4").toggle()
+        $(".show2").toggle()
+    })
+    // ----------第二个 加减号---end
+
+    // ----------第三个 加减号---start
+    $(".bbb3").click(function () {
+        $(".click5").toggle()
+        $(".click6").toggle()
+        $(".show3").toggle()
+    })
+    // ----------第三个 加减号---end
+
+    $(".change").click(function () {
+        $(".changeOther_children").show()
+    })
+    $(".item3_btn1").click(function () {
+        $(".changeOther_children").hide()
+        $(".posi").hide()
+    })
+
+
+    // -----全选------
+    $("input[name=checked]").click(function () {
+        $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+        $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+        $("#all_money")[0].innerText = Number($('.total_span1')[0].innerText) + Number($('.total_span2')[0].innerText)
+        var len = $("input[name=check]").length;
+        if ($(this)[0].checked) {
+            for (var i = 0; i < len; i++) {
+                $("input[name=check]")[i].checked = true
+            }
+            $("#hhhh").eq(0).addClass("hhh")
+        } else {
+            for (var i = 0; i < len; i++) {
+                $("input[name=check]")[i].checked = false
+            }
+            $("#hhhh").eq(0).removeClass("hhh")
+
+        }
+        // ----全选框关联后面总额
+        if ($("input[name=checked]")[0].checked) {
+            $("#all_money")[0].innerText = Number($('.total_span1')[0].innerText) + Number($('.total_span2')[0].innerText)
+            $("#all_number")[0].innerText = Number(($("#nuB")[0].innerText)) + Number(($("#nuB1")[0].innerText))
+        } else if ($("input[name=check]")[0].checked) {
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $("#all_money")[0].innerText = $(".total_span1")[0].innerText
+            $("#all_number")[0].innerText = Number(($("#nuB")[0].innerText))
+        } else if ($("input[name=check]")[1].checked) {
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+            $("#all_money")[0].innerText = $(".total_span2")[0].innerText
+            $("#all_number")[0].innerText = Number(($("#nuB1")[0].innerText))
+        } else {
+            $("#all_money")[0].innerText = 0 + ".00"
+            $("#all_number")[0].innerText = 0
+        }
+    })
+    // ----反选----
+    $("input[name=check]").click(function () {
+        var a = $("input[name=check]:checked").length;
+        var b = $("input[name=check]").length;
+        if (a === b) {
+            $("input[name=checked]")[0].checked = true
+        } else {
+            $("input[name=checked]")[0].checked = false
+        }
+    })
+    // -----点击第一个checkbox时后面总价
+    $("input[name=check]").eq(0).click(function () {
+
+        if ($(this)[0].checked) {
+            $("#all_money")[0].innerText = $('.total_span1')[0].innerText
+            $("#hhhh").eq(0).addClass("hhh")
+        } else {
+            $("#hhhh").eq(0).removeClass("hhh")
+        }
+        // ----第一个checkbox框关联后面总额
+        if ($("input[name=checked]")[0].checked) {
+            $("#all_money")[0].innerText = Number($('.total_span1')[0].innerText) + Number($('.total_span2')[0].innerText)
+            $("#all_number")[0].innerText = Number(($("#nuB")[0].innerText)) + Number(($("#nuB1")[0].innerText))
+        } else if ($("input[name=check]")[0].checked) {
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $("#all_money")[0].innerText = $(".total_span1")[0].innerText
+            $("#all_number")[0].innerText = Number(($("#nuB")[0].innerText))
+        } else if ($("input[name=check]")[1].checked) {
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+            $("#all_money")[0].innerText = $(".total_span2")[0].innerText
+            $("#all_number")[0].innerText = Number(($("#nuB1")[0].innerText))
+        } else {
+            $("#all_money")[0].innerText = 0 + ".00"
+            $("#all_number")[0].innerText = 0
+        }
+
+    })
+    // ------点击第二个checkbox时后面总价
+    $("input[name=check]").eq(1).click(function () {
+
+        if ($(this)[0].checked) {
+            $("#all_money")[0].innerText = ($('.total_span2')[0].innerText) * ($("#nuB1")[0].innerText)
+            $("#hhhh").eq(0).addClass("hhh")
+        } else {
+            $("#hhhh").eq(0).removeClass("hhh")
+        }
+        // ----第二个checkbox框关联后面总额
+        if ($("input[name=checked]")[0].checked) {
+            $("#all_money")[0].innerText = Number($('.total_span1')[0].innerText) + Number($('.total_span2')[0].innerText)
+            $("#all_number")[0].innerText = Number(($("#nuB")[0].innerText)) + Number(($("#nuB1")[0].innerText))
+        } else if ($("input[name=check]")[0].checked) {
+            $(".total_span1")[0].innerText = ($("#nuB")[0].innerText) * ($("#d299")[0].innerText)
+            $("#all_money")[0].innerText = $(".total_span1")[0].innerText
+            $("#all_number")[0].innerText = Number(($("#nuB")[0].innerText))
+        } else if ($("input[name=check]")[1].checked) {
+            $(".total_span2")[0].innerText = ($("#nuB1")[0].innerText) * ($("#d174")[0].innerText)
+            $("#all_money")[0].innerText = $(".total_span2")[0].innerText
+            $("#all_number")[0].innerText = Number(($("#nuB1")[0].innerText))
+        } else {
+            $("#all_money")[0].innerText = 0 + ".00"
+            $("#all_number")[0].innerText = 0
+        }
+
+    })
+
+
+
+    //--------------------商品打开编辑后-------------------------
+    $("#littleImg1").click(function () {
+        $("#ul1>li").removeClass("rgb1")
+        $(".item3_btn2").click(function () {
+            $(".posi").show()
+        })
+    })
+    $("#ul1>li").click(function () {
+        $(this).addClass("rgb1").siblings().removeClass("rgb1")
+        $("#ma2")[0].innerText = $(this)[0].innerText;
+        $(".posi").hide()
+        $(".item3_btn2").click(function () {
+            $(".posi").hide()
+            $("#ma1")[0].innerText = $("#ma2")[0].innerText
+            $(".changeOther_children").hide()
+        })
+    })
+    //--------------------商品打开编辑后-------------------------
+
+    $(".remove").click(function () {
+        $(this).parent().parent().parent().remove()
+    })
+
+
+
+    function xx() {
+        $("#hhhh").click(function () {
+            window.location.href = "../html/settle.html"
+        })
+    }
+    $(".inputs").click(function () {
+        var aa = $("#inputs1")[0].checked
+        var bb = $("#inputs2")[0].checked
+        var cc = $("#inputs3")[0].checked
+        console.log(aa)
+        console.log(bb)
+        console.log(cc)
+        if (aa || bb || cc) {
+            xx()
+        }
+    })
+
+    $("#goOnBuy").click(function(){
+        window.location.href="../html/newShop.html"
+    })
+
+</script>
+
+</html>

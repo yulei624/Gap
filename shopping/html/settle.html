@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结算地址页面</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/settle.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1644452_x8ihd86ffb.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1644452_rga6pa1vleo.css">
+    <script src="../js/jQuery-1.11.3.js"></script>
+    <script src="../js/country.js"></script>
+</head>
+
+<body>
+    <div id="header1">
+    </div>
+
+    <div class="wraper2">
+        <div class="left">
+            <div class="w2_text">配送信息</div>
+            <div class="place">
+                <ul id="ulId">
+                    <li>
+                        <p class="li_p1"><span>张婉莹</span><span>18338687156</span> <span id="look_place1"
+                                class="p1_span"><i class="iconfont icon-bianji"></i> 编辑</span></p>
+                        <p><span>新疆维吾尔自治区</span><span>乌鲁木齐市</span><span>沙依巴克区</span><span>不晓得</span></p>
+                    </li>
+                    <li>
+                        <p class="li_p1"><span>余雷</span><span>18338687156</span> <span id="look_place2"
+                                class="p1_span"><i class="iconfont icon-bianji"></i> 编辑</span></p>
+                        <p><span>河南省</span><span>信阳市</span><span>商城县</span><span>观庙镇西街</span></p>
+                    </li>
+                    <li>
+                        <p class="li_p1"><span>张婉莹</span><span>18338687156</span> <span id="look_place3"
+                                class="p1_span"><i class="iconfont icon-bianji"></i> 编辑</span></p>
+                        <p><span>新疆维吾尔自治区</span><span>乌鲁木齐市</span><span>沙依巴克区</span><span>不晓得</span></p>
+                    </li>
+                </ul>
+                <div class="add_people"><span class="add_p"><i class="iconfont icon-jiahao"></i> 新增收件人地址</span><span
+                        class="add_hide">收起 ∧</span><span class="add_show">显示全部地址 ∨</span></div>
+                <div class="box5">
+                    <p>配送方式</p>
+                    <p><span>快递</span><span>免运费</span></p>
+                </div>
+            </div>
+            <div class="w2_text">商品信息</div>
+            <div class="w2_shop">
+                <div class="shop_1">
+                    <img src="https://uxresources.baozun.com/prod/88000136/20200213/15011A5ECF940E76F15A7B68D1072A8D.jpg"
+                        alt="">
+                    <div class="shop_right">
+                        <p><span>Gap</span><span>￥299.50</span><span>x1</span><span>小计:￥299.50</span></p>
+                        <p>男装|棉质舒适翻领夹克外套</p>
+                        <p>175/94A(L)、浅棕色</p>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;" class="shop_1">
+                    <img src="https://uxresources.baozun.com/prod/88000136/20200215/5DC7508FB6DEDBC0B366A8CFF33EDB3D.jpg"
+                        alt="">
+                    <div class="shop_right">
+                        <p><span>Gap</span><span>￥174.50</span><span>x1</span><span>小计:￥174.50</span></p>
+                        <p>女装|徽标LOGO棉质毛圈布套头连帽衫</p>
+                        <p>170/100A(L)、海军蓝色</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w2_text">支付信息</div>
+            <div class="w2_buyFour">
+                <div>
+                    <input type="radio" name="zhifu" checked="true">
+                    <img src="../imgs/zhifubao.png" alt="">
+                    <span>支付宝支付</span>
+                </div>
+                <div>
+                    <input type="radio" name="zhifu">
+                    <img src="../imgs/weixinzhifu.png" alt="">
+                    <span>微信支付</span>
+                </div>
+                <div>
+                    <input type="radio" name="zhifu">
+                    <img src="../imgs/lipingka.png" alt="">
+                    <span>Gap礼品卡支付</span>
+                </div>
+                <div>
+                    <input type="radio" name="zhifu">
+                    <img src="../imgs/lipingka.png" alt="">
+                    <span>Old Navy礼品卡支付</span>
+                </div>
+            </div>
+            <div class="look"><a id="look_card" href="javascript:;">查看礼品卡说明</a><a href="">查询余额</a></div>
+            <div class="describle"><img id="look_invoice" src="../imgs/describle.png" alt=""></div>
+            <button class="last_btn">提交订单</button>
+        </div>
+        <div class="rightBox">
+            <div class="rb1">
+                订单摘要
+                <span>已选<span id="all_number"> 2 </span>件商品</span>
+            </div>
+            <div class="rb2">
+                商品总额
+                <span id="all_money">474.00</span><span>￥</span>
+            </div>
+            <div class="rb3">
+                优惠<i class="iconfont icon-wenhao"></i>
+                <span>￥0.00</span>
+            </div>
+            <div class="rb4">
+                <span>运费</span>
+                <span>免运费</span>
+            </div>
+            <div class="rb5">
+                订单总金额
+                <span>￥474.00</span>
+            </div>
+            <div class="xiadan">下单即可能获得积分 <a id="look_rule" href="javascript:;">查看规则</a></div>
+            <div class="rb6">
+                <button style="cursor: pointer;" id="hhhh">继续购物</button>
+            </div>
+
+        </div>
+        <div class="last">
+            <div class="last1">
+                <div class="aaa bbb1">需要帮助?<span class="click1">+</span><span class="click2">—</span></div>
+                <div class="show1">
+                    <p><i class="iconfont icon-htmal5icon31"></i> <span> 在线客服 </span><span>(服务时间:10:00-22:00)</span></p>
+                    <p>售后服务热线</p>
+                    <p>400-680-8517 <span class="fwTime">(服务时间:10:00-19:00)</span></p>
+                </div>
+            </div>
+            <div class="last1">
+                <div class="aaa bbb2">支付方式<span class="click3">+</span><span class="click4">—</span></div>
+                <div class="show2">
+                    <span><i style="color: rgb(30,149,212); font-size: 20px;" class="iconfont icon-zhifubao"></i>
+                        支付宝</span>
+                    <span style="display: block;"><i style="color: rgb(0,183,0);font-size: 20px;"
+                            class="iconfont icon-weixinzhifu1"></i> 微信</span>
+                    <span><i style="color: rgb(18,33,71);font-size: 20px;" class="iconfont icon-shinshoplipinqia"></i>
+                        礼品卡</span>
+                </div>
+            </div>
+            <div class="last1">
+                <div class="aaa bbb3">退换货政策<span class="click5">+</span><span class="click6">—</span></div>
+                <div class="show3">
+                    <p>我们提供完善的售后服务，承诺自顾客签收商品之日（以签收快递日期为准）起15天内（减价商品和正价商品)，如对商品有任何不满意，我们将提供无理由退换货服务。以初上市吊牌价销售的商品退换货费用全免（不包括参与限时促销的正价商品和减价商品）。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hideBgc">
+        <div class="place1">
+            <div class="place_box">
+                <div class="place_title"> 新增地址 <span class="close_places">X</span></div>
+                <div class="box1">
+                    <p class="box_p">收件人</p>
+                    <input id="input1" onblur="blurFn(1)" class="box_ipnut" type="text" placeholder="请输入姓名">
+                    <p class="hideText p1">请输入收件人姓名</p>
+                    <p class="hideText p2">输入的收件人姓名有误</p>
+                </div>
+                <div class="box2">
+                    <p class="box_p">手机号</p>
+                    <input id="input2" onblur="blurFn(2)" class="box_ipnut" type="text" placeholder="请输入手机号">
+                    <p class="hideText p3">请输入收件人的联系电话</p>
+                    <p class="hideText p4">输入的联系方式有误</p>
+                </div>
+                <div class="box3">
+                    <div class="box_shq">
+                        <span>省</span>
+                        <span style="padding-left: 12px;">市</span>
+                        <span style="padding-left: 14px;">区</span>
+                    </div>
+                    <div class="box3_select">
+                        <select id="select1" style="margin-left: 0;" name="" onchange="f()">
+                            <option value="">请选择省</option>
+                        </select>
+                        <select id="select2" name="" onchange="g()">
+                            <option value="">请选择市</option>
+                        </select>
+                        <select id="select3" name="">
+                            <option value="">请选择县/区</option>
+                        </select>
+                    </div>
+                    <p class="hideText pp">请输入地址区域</p>
+                </div>
+                <div class="box4">
+                    <p>详细地址</p>
+                    <textarea id="input3" onblur="blurFn(3)" placeholder="请输入详细地址"></textarea>
+                    <p class="hideText1 p5">请输入详细地址</p>
+                    <p class="hideText1 p6">输入的详细地址有误</p>
+                </div>
+                <div class="box5">
+                    <input type="checkbox" checked>
+                    <span>设为默认地址</span>
+                    <div><button class="div_btn1">取消</button><button class="div_btn2">保存并使用</button></div>
+                </div>
+            </div>
+        </div>
+        <div class="rule">
+            <span class="close_rule">X</span>
+            <h4>积分规则</h4>
+            <div class="rule_title">*购买礼品卡享受积分，但使用礼品卡消费不享受积分</div>
+            <div class="rule_title">1.积分累积及使用细则</div>
+            <div class="rule_title">1.1积分累积</div>
+            <p>1.1.1
+                会员在大陆地区、香港地区和台湾地区的Gap集团企业门店及官方网站、天猫官方旗舰店、天猫gap礼品卡专卖店购物，提供会员卡号或手机号并完成付款后，将自动累积相应积分。*天猫渠道购物获取相应积分前，需先将天猫账号绑定同一手机号所申请的Gap会员卡。[如何绑定：进入天猫品牌店铺首页-点击右下角菜单栏“加入会员”-填写所要绑定的手机号-点击“申请”绑定会员卡，即可查看现有积分及自动累积相应积分]
+            </p>
+            <p>1.1.2 如会员在购物当时未能成功累计积分，可通过官方微信在线客服或发送邮件至China_member@gap.com， 提供购物小票照片由客服人员帮助完成积分补录</p>
+            <p>1.1.3 大陆地区每消费1元人民币可累计1积分<br> 香港地区每消费1元港币可累计1积分
+                <br> 台湾地区每消费5元新台币可累积1分<br> *购买礼品卡享受积分，但使用礼品卡消费不享受积分
+                <br> *清仓店（包括香港E-max清仓店、重庆U城天街店、沈阳尚柏奥特莱斯店，深圳华盛奥特莱斯店及可能增加的其他清仓店）及非Gap集团自营店的任何消费皆不计入积分
+                <br>
+            </p>
+            <div class="rule_title">1.2积分有效期</div>
+            <p>每笔积分的有效期从积分生效当月至次年该月月底，积分到期系统将自动清零。</p>
+            <div class="rule_title">1.3积分到账</div>
+            <p> 线下门店：购物后3-5个工作日<br>线上官网：发货后3-5个工作日</p>
+            <div class="rule_title">1.4积分兑换礼遇</div>
+            <p>会员可自助通过官方微信、官方网站、官方活动网站、天猫官方旗舰店、天猫gap礼品卡专卖店进行积分兑换。具体兑换列表可实时查询，了解最新兑换规则。<br>1.4.1
+                优惠券和积分抵扣金额将不可用于开具发票。<br>1.4.2
+                每笔消费产生的积分可兑换各类优惠礼券及增值服务，具体项目会视情况调整，详情可见官网或官方微信或天猫官方旗舰店或天猫gap礼品卡专卖店的会员兑礼专区。<br>官方微信：gap_1969；Oldnavy_cn；GapHongKong<br>官方小程序：Gap盖璞；Gap
+                Hong Kong；Old Navy<br>官网网站：
+            </p>
+            <p>会员可自助通过官方微信、官方网站、官方活动网站、天猫官方旗舰店、天猫gap礼品卡专卖店进行积分兑换。具体兑换列表可实时查询，了解最新兑换规则。<br>1.4.1
+                优惠券和积分抵扣金额将不可用于开具发票。<br>1.4.2
+                每笔消费产生的积分可兑换各类优惠礼券及增值服务，具体项目会视情况调整，详情可见官网或官方微信或天猫官方旗舰店或天猫gap礼品卡专卖店的会员兑礼专区。<br>官方微信：gap_1969；Oldnavy_cn；GapHongKong<br>官方小程序：Gap盖璞；Gap
+                Hong Kong；Old Navy<br>官网网站：
+            </p>
+            <p>会员可自助通过官方微信、官方网站、官方活动网站、天猫官方旗舰店、天猫gap礼品卡专卖店进行积分兑换。具体兑换列表可实时查询，了解最新兑换规则。<br>1.4.1
+                优惠券和积分抵扣金额将不可用于开具发票。<br>1.4.2
+                每笔消费产生的积分可兑换各类优惠礼券及增值服务，具体项目会视情况调整，详情可见官网或官方微信或天猫官方旗舰店或天猫gap礼品卡专卖店的会员兑礼专区。<br>官方微信：gap_1969；Oldnavy_cn；GapHongKong<br>官方小程序：Gap盖璞；Gap
+                Hong Kong；Old Navy<br>官网网站：
+            </p>
+            <p>会员可自助通过官方微信、官方网站、官方活动网站、天猫官方旗舰店、天猫gap礼品卡专卖店进行积分兑换。具体兑换列表可实时查询，了解最新兑换规则。<br>1.4.1
+                优惠券和积分抵扣金额将不可用于开具发票。<br>1.4.2
+                每笔消费产生的积分可兑换各类优惠礼券及增值服务，具体项目会视情况调整，详情可见官网或官方微信或天猫官方旗舰店或天猫gap礼品卡专卖店的会员兑礼专区。<br>官方微信：gap_1969；Oldnavy_cn；GapHongKong<br>官方小程序：Gap盖璞；Gap
+                Hong Kong；Old Navy<br>官网网站：
+            </p>
+            <p>会员可自助通过官方微信、官方网站、官方活动网站、天猫官方旗舰店、天猫gap礼品卡专卖店进行积分兑换。具体兑换列表可实时查询，了解最新兑换规则。<br>1.4.1
+                优惠券和积分抵扣金额将不可用于开具发票。<br>1.4.2
+                每笔消费产生的积分可兑换各类优惠礼券及增值服务，具体项目会视情况调整，详情可见官网或官方微信或天猫官方旗舰店或天猫gap礼品卡专卖店的会员兑礼专区。<br>官方微信：gap_1969；Oldnavy_cn；GapHongKong<br>官方小程序：Gap盖璞；Gap
+                Hong Kong；Old Navy<br>官网网站：
+            </p>
+            <p>会员可自助通过官方微信、官方网站、官方活动网站、天猫官方旗舰店、天猫gap礼品卡专卖店进行积分兑换。具体兑换列表可实时查询，了解最新兑换规则。<br>1.4.1
+                优惠券和积分抵扣金额将不可用于开具发票。<br>1.4.2
+                每笔消费产生的积分可兑换各类优惠礼券及增值服务，具体项目会视情况调整，详情可见官网或官方微信或天猫官方旗舰店或天猫gap礼品卡专卖店的会员兑礼专区。<br>官方微信：gap_1969；Oldnavy_cn；GapHongKong<br>官方小程序：Gap盖璞；Gap
+                Hong Kong；Old Navy<br>官网网站：
+            </p>
+        </div>
+        <div class="invoice">
+            <span class="close_invoice">X</span>
+            <h4 class="title4">发票制度</h4>
+            <p>从2017年10月16日起，我司正式开具"增值税电子普通发票"（以下简称：电子发票）。<br>电子发票合法，可用于报销，请参考国家税务总局公告2015年第84号文《国家税务总局关于推行通过增值税电子发票系统开具<br>的增值税电子普通发票有关问题的公告》。
+            </p>
+            <p>根据财政部国家档案局令第79号《会计档案管理办法》第三条规定：增值税电子普通发票，其法律效力、基本用途和基本使<br>用、规定等与税务机关监制的增值税普通发票相同。</p>
+            <div class="title_small">Q1: 电子发票申请的失效？</div>
+            <p>A: 顾客在"物流签收"后，30天内可申请电子发票。</p>
+            <div class="title_small">Q2: 购买人为企业时，必须提供哪些开票资料？</div>
+            <p>A: 依据国家《国家税务总局公告2017年第16号》,自2017年7月1日起，购买方为企业的，索取增值税普通发票时，应向销售方<br>提供纳税人识别号或统一社会信用代码。</p>
+            <div class="title_small">Q3: 发票开具发票内容？</div>
+            <p>A: 跟据顾客的实质交易，如购买商品，发票内容为"服装"；如购买礼品卡，发票内容为"预付卡销售和充值"。</p>
+            <div class="title_small">Q4: 发票开具金额的确认？</div>
+            <p>A: 发票金额为顾客的实付金额，不包括"礼品卡支付"金额，优惠券金额，积分抵扣金额等。</p>
+            <div class="title_small">Q5: 礼品卡开票细则？</div>
+            <p>A: 依据《国家税务总局公告2016年第53号》 第3.3条 持卡人使用单用途卡购买货物或服务时，货物或者服务的销售方应按照<br>现行规定缴纳增值税，且不得向持卡人开具增值税发票。 第3.4条
+                销售方在收到售卡方结算的销售款时，应向售卡方开具增值<br>税普通发票，并在备注栏注明"收到预付卡结算款"，不得开具增值税专用发票。</p>
+            <div class="title_small">Q6: 如发生退货交易，已开立的电子发票，如何处置？</div>
+            <p>A：系统自动全额开具"红字发票"，冲正原发票。 如发生部分退货,您需要对剩余部分申请发票,请联系我们的客服。</p>
+            <div class="title_small">Q7: 如您不能通过扫描二维码, 取得电子普通发票？</div>
+            <p>A：可寻求我们店员帮助，留下您的开票信息及联系方式，我们会在10个工作日内将电子发票提供给您</p>
+            <div class="title_small">Q8: 如您在申请电子发票时，收不到短信"验证码"？</div>
+            <p>A: 短信认证，手机号码优先级为： 首先 -注册时填的手机号 其次 - 收件人的手机号</p>
+            <div class="title_small">Q9: 如您的发票，开票信息有误，需重新开具，如何申请？</div>
+            <p>A：请致电客服，提供原交易信息，原发票号码，正确的开票信息，并留下您的电子邮箱。待盖璞财务核实后，开具红字发票，<br>冲正原发票，并开具新的发票，发送至您预留的电子邮箱。</p>
+            <div class="title_small">Q10: 如何查验电子发票的真伪？</div>
+            <p>A：可登入https://inv-veri.chinatax.gov.cn/查询，输入电子发票信息时行验证。</p>
+            <div class="title_small">Q11: 电子发票开具成功后，如何获取？</div>
+            <p>A: 可以存入微信卡包后，进行查询。可登入 https://www.fapiao.com/dzfp-web/login.html，手机号注册后即可查询。</p>
+        </div>
+        <div class="card">
+            <span class="close_card">X</span>
+            <h4 class="title4">礼品卡说明</h4>
+            <div class="title_small">一. 礼品卡使用及细则</div>
+            <p>1.礼品卡可在gap.cn网上购买商品（礼品卡不能用于购买礼品卡）。结算时将直接扣除卡内余额至零为止。超出卡内金额部分<br>请自行付款；</p>
+            <div class="title_small">二. 礼品卡订单查询</div>
+            <p>2.如需退还使用本卡购买的商品，退款将直接存入卡内，恕不退还现金；</p>
+            <p>3.本卡不记名、不提现、不透支、不计息、不找零。此卡一经售出，恕不退卡。如有任何遗失，恕不补发或退款；</p>
+            <p>4.发票已于购买本卡时开具。凭卡购物时，恕不重开发票；</p>
+            <p>5.本卡有效期为购买日起3年；</p>
+            <p>6.如果卡片发生损坏，顾客需凭借受损卡片才可更换一张新卡，其金额等同于当时受损卡片上剩余的金额；</p>
+            <p>7.购买礼品卡享受积分，但使用礼品卡消费不享受积分。</p>
+            <div class="title_small">三. 礼品卡配送和激活</div>
+            <p>礼品卡采用单独发货形式，不与其他商品订单同时发货。
+                礼品卡将在礼品卡订单支付成功后，1-2个工作日内发卡（周一至周<br>五发货，周六、日及法定节假日不发货），礼品卡将以第三方配送。订单成功签收后，您可以通过以下方式激活礼品卡：登<br>录"<a
+                    href="">我的账户</a>"->"礼品卡订单"页面，确认收货后，点击激活按钮，激活礼品卡。</p>
+            <div class="title_small">四. 礼品卡余额查询</div>
+            <p>您可在Gap中国官网<a href="">查询礼品卡余额</a>。</p>
+
+
+
+
+        </div>
+
+        <div class="places">
+            <span class="close_places">X</span>
+            <div class="title4">编辑地址</div>
+            <div class="place_boxs">
+                <div class="box21">
+                    <p class="box_p">收件人</p>
+                    <input class="box_ipnut" type="text" placeholder="请输入姓名">
+                </div>
+                <div class="box22">
+                    <p class="box_p1">手机号</p>
+                    <input class="box_ipnut11" type="text" placeholder="请输入手机号">
+                </div>
+                <div class="box3">
+                    <div class="box_shq1">
+                        <span>省</span>
+                        <span style="padding-left: 12px;">市</span>
+                        <span style="padding-left: 14px;">区</span>
+                    </div>
+                    <div class="box3_select1">
+                        <select style="margin-left: 0;" name="" id="">
+                            <option value="">请选择省</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">请选择市</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">请选择县/区</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="box24">
+                    <p>详细地址</p>
+                    <textarea placeholder="请输入详细地址"></textarea>
+                </div>
+                <div class="box25">
+                    <input type="checkbox">
+                    <span>设为默认地址</span>
+                    <div>编辑地址</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="footer"></div>
+</body>
+<script src="../js/common.js"></script>
+<script>
+    $("#header1").load("../common/header1.html")
+    $("#footer").load("../common/footer.html")
+
+    common();
+
+    // ----------第一个 加减号---start
+    $(".bbb1").click(function () {
+        $(".click1").toggle()
+        $(".click2").toggle()
+        $(".show1").toggle()
+    })
+    // ----------第一个 加减号---end
+
+    // ----------第二个 加减号---start
+    $(".bbb2").click(function () {
+        $(".click3").toggle()
+        $(".click4").toggle()
+        $(".show2").toggle()
+    })
+    // ----------第二个 加减号---end
+
+    // ----------第三个 加减号---start
+    $(".bbb3").click(function () {
+        $(".click5").toggle()
+        $(".click6").toggle()
+        $(".show3").toggle()
+    })
+    // ----------第三个 加减号---end
+
+    $(".change").click(function () {
+        $(".changeOther_children").show()
+    })
+    $(".item3_btn1").click(function () {
+        $(".changeOther_children").hide()
+        $(".posi").hide()
+    })
+
+
+    $(".add_hide").click(function () {
+        $(this).hide()
+        $(".add_show").show()
+        $("#ulId>li:gt(1)").hide()
+    })
+    $(".add_show").click(function () {
+        $(this).hide()
+        $(".add_hide").show()
+        $("#ulId>li:gt(1)").show()
+    })
+
+    $("#ulId>li").mouseenter(function () {
+        var keys = $(this).index()
+        $(".p1_span").eq(keys).show()
+    }).mouseleave(function () {
+        var keys = $(this).index()
+        $(".p1_span").eq(keys).hide()
+    }).click(function () {
+        $(this).addClass("borderBlack").siblings().removeClass("borderBlack")
+    })
+
+    $(".title_click").click(function () {
+        $(".hideBgc").hide()
+        $(".place1").hide()
+        $("#input1").removeClass("borderRed")
+        $(".p2").hide()
+        $(".p1").hide()
+        $("#input2").removeClass("borderRed")
+        $(".p3").hide()
+        $(".p4").hide()
+        $("#input3").removeClass("borderRed")
+        $(".p5").hide()
+        $(".p6").hide()
+        $("#select1").removeClass("borderRed")
+        $("#select2").removeClass("borderRed")
+        $("#select3").removeClass("borderRed")
+        $(".pp").hide()
+    })
+    $(".div_btn1").click(function () {
+        $(".hideBgc").hide()
+        $(".place1").hide()
+        $("#input1").removeClass("borderRed")
+        $(".p2").hide()
+        $(".p1").hide()
+        $("#input2").removeClass("borderRed")
+        $(".p3").hide()
+        $(".p4").hide()
+        $("#input3").removeClass("borderRed")
+        $(".p5").hide()
+        $(".p6").hide()
+        $("#select1").removeClass("borderRed")
+        $("#select2").removeClass("borderRed")
+        $("#select3").removeClass("borderRed")
+        $(".pp").hide()
+    })
+    $(".add_p").click(function () {
+        $(".hideBgc").show()
+        $(".place1").show()
+    })
+
+
+
+    $(".div_btn2").click(function () {
+        let aa = $("#input1").val()
+        if (aa === '') {
+            $("#input1").addClass("borderRed")
+            $(".p1").show()
+            $(".p2").hide()
+        }
+        let bb = $("#input2").val()
+        if (bb === '') {
+            $("#input2").addClass("borderRed")
+            $(".p3").show()
+            $(".p4").hide()
+        }
+        let cc = $("#input3").val()
+        if (cc === '') {
+            $("#input3").addClass("borderRed")
+            $(".p5").show()
+            $(".p6").hide()
+        }
+        let dd = $("#select1>option:selected").text()
+        if (dd === '') {
+            $("#select1").addClass("borderRed")
+            $(".pp").show()
+        }
+        let ee = $("#select2>option:selected").text()
+        if (ee === '') {
+            $("#select2").addClass("borderRed")
+            $(".pp").show()
+        }
+        let ff = $("#select3>option:selected").text()
+        if (ff === '') {
+            $("#select3").addClass("borderRed")
+            $(".pp").show()
+        }
+    })
+
+    $("#look_rule").click(function () {
+        $(".hideBgc").show()
+        $(".rule").show()
+    })
+    $(".close_rule").click(function () {
+        $(".hideBgc").hide()
+        $(".rule").hide()
+    })
+
+    $("#look_invoice").click(function () {
+        $(".hideBgc").show()
+        $(".invoice").show()
+    })
+    $(".close_invoice").click(function () {
+        $(".hideBgc").hide()
+        $(".invoice").hide()
+    })
+
+    $("#look_card").click(function () {
+        $(".hideBgc").show()
+        $(".card").show()
+    })
+    $(".close_card").click(function () {
+        $(".hideBgc").hide()
+        $(".card").hide()
+    })
+
+    $("#look_place1").click(function () {
+        $(".hideBgc").show()
+        $(".places").show()
+    })
+    $("#look_place2").click(function () {
+        $(".hideBgc").show()
+        $(".places").show()
+    })
+    $("#look_place3").click(function () {
+        $(".hideBgc").show()
+        $(".places").show()
+    })
+    $(".close_places").click(function () {
+        $(".hideBgc").hide()
+        $(".places").hide()
+    })
+
+
+    function blurFn(value) {
+        if (value === 1) {
+            let val = $("#input1").val()
+            if (val === '') {
+                $("#input1").addClass("borderRed")
+                $(".p1").show()
+                $(".p2").hide()
+            }
+            else if (!(val == "余雷" || val == "余大雷" || val == "张婉莹")) {
+                // else if (!(val==1 || val==2||val==3)) {
+                $("#input1").addClass("borderRed")
+                $(".p2").show()
+                $(".p1").hide()
+            }
+            else {
+                $("#input1").removeClass("borderRed")
+                $(".p2").hide()
+                $(".p1").hide()
+            }
+        }
+        else if (value === 2) {
+            let val = $("#input2").val()
+            if (val === '') {
+                $("#input2").addClass("borderRed")
+                $(".p3").show()
+                $(".p4").hide()
+            }
+            else if (!(/^1[34578]\d{9}$/.test(val)) && val !== '') {
+                $("#input2").addClass("borderRed")
+                $(".p4").show()
+                $(".p3").hide()
+            }
+            else {
+                $("#input2").removeClass("borderRed")
+                $(".p4").hide()
+                $(".p3").hide()
+            }
+        }
+        else if (value === 3) {
+            let val = $("#input3").val()
+            if (val === '') {
+                $("#input3").addClass("borderRed")
+                $(".p5").show()
+                $(".p6").hide()
+            }
+            else if (/\d/.test(val) && val !== '') {
+                $("#input3").addClass("borderRed")
+                $(".p6").show()
+                $(".p5").hide()
+            }
+            else {
+                $("#input3").removeClass("borderRed")
+                $(".p6").hide()
+                $(".p5").hide()
+            }
+        }
+    }
+    // -------提交订单，页面跳转---------
+    $(".last_btn").click(function () {
+        window.location.href = "../html/pay.html"
+    })
+    $("#hhhh").click(function () {
+        window.location.href = "../html/newShop.html"
+    })
+
+
+
+
+
+</script>
+
+</html>

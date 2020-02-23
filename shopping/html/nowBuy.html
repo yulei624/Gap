@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>立即结算页面</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/nowBuy.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1644452_x8ihd86ffb.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1641042_bnco91ofnrl.css">
+    <script src="../js/jQuery-1.11.3.js"></script>
+    <script src="../js/country.js"></script>
+</head>
+
+<body>
+    <div class="wraper1">
+        <div class="header">
+            <div class="hd1"><a href="../html/myBag.html"><i class="iconfont icon-zuojiantou"></i> 返回购物袋</a></div>
+            <div class="hd2"><img src="../imgs/hdlogo.png" alt=""></div>
+            <div class="hd3"><span>400-680-8517</span><span><i class="iconfont icon-kefu"></i> 在线客服</span></div>
+        </div>
+    </div>
+    <div class="wraper2">
+        <div class="left">
+            <div class="w2_text">配送信息</div>
+            <div class="place">
+                <div class="place_box">
+                    <div class="box1">
+                        <p class="box_p">收件人</p>
+                        <input class="box_ipnut" type="text" placeholder="请输入姓名">
+                    </div>
+                    <div class="box2">
+                        <p class="box_p">手机号</p>
+                        <input class="box_ipnut" type="text" placeholder="请输入手机号">
+                    </div>
+                    <div class="box3">
+                        <div class="box_shq">
+                            <span>省</span>
+                            <span style="padding-left: 12px;">市</span>
+                            <span style="padding-left: 14px;">区</span>
+                        </div>
+                        <div class="box3_select">
+                            <select style="margin-left: 0;" name="" id="sheng" onchange="f()">
+                                <option value="">请选择省</option>
+                            </select>
+                            <select name="" id="shi" onchange="g()">
+                                <option value="">请选择市</option>
+                            </select>
+                            <select name="" id="qu">
+                                <option value="">请选择县/区</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box4">
+                        <p>详细地址</p>
+                        <textarea placeholder="请输入详细地址"></textarea>
+                    </div>
+                    <div class="box5">
+                        <p>配送方式</p>
+                        <p><span>快递</span><span>免运费</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="w2_text">商品信息</div>
+            <div class="w2_shop">
+                <div class="shop_1">
+                    <img src="https://uxresources.baozun.com/prod/88000136/20200213/15011A5ECF940E76F15A7B68D1072A8D.jpg"
+                        alt="">
+                    <div class="shop_right">
+                        <p><span>Gap</span><span>￥299.50</span><span>x1</span><span>小计:￥299.50</span></p>
+                        <p>男装|棉质舒适翻领夹克外套</p>
+                        <p>175/94A(L)、浅棕色</p>
+                    </div>
+                </div>
+                <div style="margin-top: 10px;" class="shop_1">
+                    <img src="https://uxresources.baozun.com/prod/88000136/20200215/5DC7508FB6DEDBC0B366A8CFF33EDB3D.jpg"
+                        alt="">
+                    <div class="shop_right">
+                        <p><span>Gap</span><span>￥174.50</span><span>x1</span><span>小计:￥174.50</span></p>
+                        <p>女装|徽标LOGO棉质毛圈布套头连帽衫</p>
+                        <p>170/100A(L)、海军蓝色</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w2_text">支付信息</div>
+            <div class="w2_buyFour">
+                <div>
+                    <input type="radio">
+                    <img src="../imgs/zhifubao.png" alt="">
+                    <span>支付宝支付</span>
+                </div>
+                <div>
+                    <input type="radio">
+                    <img src="../imgs/weixinzhifu.png" alt="">
+                    <span>微信支付</span>
+                </div>
+                <div>
+                    <input type="radio">
+                    <img src="../imgs/lipingka.png" alt="">
+                    <span>Gap礼品卡支付</span>
+                </div>
+                <div>
+                    <input type="radio">
+                    <img src="../imgs/lipingka.png" alt="">
+                    <span>Old Navy礼品卡支付</span>
+                </div>
+            </div>
+            <div class="look"><a href="">查看礼品卡说明</a><a href="">查询余额</a></div>
+            <div class="describle"><img src="../imgs/describle.png" alt=""></div>
+            <button class="last_btn">提交订单</button>
+
+        </div>
+        <div class="rightBox">
+            <div class="rb1">
+                订单摘要
+                <span>已选<span id="all_number"> 2 </span>件商品</span>
+            </div>
+            <div class="rb2">
+                商品总额
+                <span id="all_money">474.00</span><span>￥</span>
+            </div>
+            <div class="rb3">
+                优惠<i class="iconfont icon-wenhao"></i>
+                <span>￥0.00</span>
+            </div>
+            <div class="rb4">
+                <span>运费</span>
+                <span>免运费</span>
+            </div>
+            <div class="rb5">
+                订单总金额
+                <span>￥474.00</span>
+            </div>
+            <div class="xiadan">下单即可能获得积分 <a href="">查看规则</a></div>
+            <div class="rb6">
+                <button id="hhhh">提交订单</button>
+            </div>
+
+
+        </div>
+        <div class="last">
+            <div class="last1">
+                <div class="aaa bbb1">需要帮助?<span class="click1">+</span><span class="click2">—</span></div>
+                <div class="show1">
+                    <p><i class="iconfont icon-htmal5icon31"></i> <span> 在线客服 </span><span>(服务时间:10:00-22:00)</span></p>
+                    <p>售后服务热线</p>
+                    <p>400-680-8517 <span class="fwTime">(服务时间:10:00-19:00)</span></p>
+                </div>
+            </div>
+            <div class="last1">
+                <div class="aaa bbb2">支付方式<span class="click3">+</span><span class="click4">—</span></div>
+                <div class="show2">
+                    <span><i style="color: rgb(30,149,212); font-size: 20px;" class="iconfont icon-zhifubao"></i>
+                        支付宝</span>
+                    <span style="display: block;"><i style="color: rgb(0,183,0);font-size: 20px;"
+                            class="iconfont icon-weixinzhifu1"></i> 微信</span>
+                    <span><i style="color: rgb(18,33,71);font-size: 20px;" class="iconfont icon-shinshoplipinqia"></i>
+                        礼品卡</span>
+                </div>
+            </div>
+            <div class="last1">
+                <div class="aaa bbb3">退换货政策<span class="click5">+</span><span class="click6">—</span></div>
+                <div class="show3">
+                    <p>我们提供完善的售后服务，承诺自顾客签收商品之日（以签收快递日期为准）起15天内（减价商品和正价商品)，如对商品有任何不满意，我们将提供无理由退换货服务。以初上市吊牌价销售的商品退换货费用全免（不包括参与限时促销的正价商品和减价商品）。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div id="footer"></div>
+</body>
+<script>
+    $("#footer").load("../common/footer.html")
+
+
+    var a = "";
+    for (let i = 0; i < country.length; i++) {
+        a += `<option value="">` + country[i].name + `</option>`
+    }
+    $("#sheng").append(a)
+    function f() {
+        var index = $("#sheng").children('option:selected').index() - 1
+        $("#shi").children().not(':eq(0)').remove()
+        var len = country[index].city.length;
+        var b = '';
+        for (let i = 0; i < len; i++) {
+            b += `<option value="">` + country[index].city[i].name + `</option>`
+        }
+        $("#shi").append(b)
+    }
+    function g() {
+        var key = $("#sheng").children('option:selected').index() - 1
+        var item = $("#shi").children('option:selected').index() - 1
+        var leng = country[key].city[item].area.length;
+        $("#qu").children().not(':eq(0)').remove()
+        var c = '';
+        for (let i = 0; i < leng; i++) {
+            c += `<option value="">` + country[key].city[item].area[i] + `</option>`
+        }
+        $("#qu").append(c)
+    }
+    $("#sheng").click(function () {
+        $(this).css("color", "black")
+    })
+    $("#shi").click(function () {
+        $(this).css("color", "black")
+    })
+    $("#qu").click(function () {
+        $(this).css("color", "black")
+    })
+
+    // ----------第一个 加减号---start
+    $(".bbb1").click(function () {
+        $(".click1").toggle()
+        $(".click2").toggle()
+        $(".show1").toggle()
+    })
+    // ----------第一个 加减号---end
+
+    // ----------第二个 加减号---start
+    $(".bbb2").click(function () {
+        $(".click3").toggle()
+        $(".click4").toggle()
+        $(".show2").toggle()
+    })
+    // ----------第二个 加减号---end
+
+    // ----------第三个 加减号---start
+    $(".bbb3").click(function () {
+        $(".click5").toggle()
+        $(".click6").toggle()
+        $(".show3").toggle()
+    })
+    // ----------第三个 加减号---end
+
+    $(".change").click(function () {
+        $(".changeOther_children").show()
+    })
+    $(".item3_btn1").click(function () {
+        $(".changeOther_children").hide()
+        $(".posi").hide()
+    })
+
+
+// -------提交订单，页面跳转---------
+    $(".last_btn").click(function () {
+        window.location.href = "../html/pay.html"
+    })
+    $("#hhhh").click(function () {
+        window.location.href = "../html/pay.html"
+    })
+
+</script>
+
+</html>

@@ -1,0 +1,50 @@
+.bigImg{
+   width: 100%;
+}
+.bigImg>a{
+    display: flex;
+}
+.Body>.bigImg>a>img{
+    width: 33.3%;
+}
+.bigImg>.bIdown{
+    /* margin: 0 auto; */
+    text-align: center;
+    padding: 20px 0 40px;
+}
+.bIdown>a{
+    padding: 0 13px 0 8px;
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    border-right: 2px solid #000;
+}
+
+.moneyImg{
+    text-align: center;
+}
+.moneyImg>.bIdown{
+    padding: 20px 0 40px 0;
+}
+
+.CenTer{
+    text-align: center;
+    margin-top: 40px;
+}
+.CenTer1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

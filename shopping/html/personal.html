@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人中心页面</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/personal.css">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1641483_4ha3e0kdksm.css">
+    <script src="../js/jQuery-1.11.3.js"></script>
+    <script src="../js/country.js"></script>
+</head>
+
+<body>
+    <!-- 顶部 开始 -->
+    <div id="header"></div>
+    <!-- 顶部 结束 -->
+
+    <div class="wraper">
+        <div class="wraper1">
+            <!-- 左边部分 start -->
+            <div class="left">
+                <div class="title"><i class="iconfont icon-shouye"></i> 会员中心</div>
+                <ul id="title1" class="title1">
+                    <li onclick="Jump1(0)" class="change">我的账户</li>
+                    <li onclick="Jump1(1)">个人信息</li>
+                    <li onclick="Jump1(2)">地址簿</li>
+                    <li onclick="Jump1(3)">积分</li>
+                    <li onclick="Jump1(4)">优惠券</li>
+                </ul>
+                <div class="title"><i class="iconfont icon-dingdan"></i> 订单信息</div>
+                <ul id="title2" class="title1">
+                    <li onclick="Jump1(5)">我的订单</li>
+                    <li onclick="Jump1(6)">我的退换货</li>
+                </ul>
+
+            </div>
+            <!-- 左边部分 end -->
+            <!-- 右边部分 start -->
+            <div class="right">
+                <div class="R_title">我的账户</div>
+                <div class="R_text">
+                    <div class="R_left">
+                        <div class="R_number"> 您好，183****7156<a href="../html/index.html">退出登录</a></div>
+                        <div class="R_welcome">欢迎光临Gap中国官网!</div>
+                        <div class="R_vip">
+                            <div class="vip_title">尊敬的蓝卡会员</div>
+                            <div class="vip_text">感谢成为我们的蓝卡会员，您可以点击查看<a href="">会员权益</a></div>
+                        </div>
+                        <div class="vip_img"><img src="../imgs/vip.png" alt=""></div>
+                        <div class="vip_last">
+                            <span>蓝卡会员</span>
+                            <span class="last_text">您再消费 <span>￥1,200.00</span> 可升级 <span>银卡会员</span></span>
+                        </div>
+                    </div>
+                    <div class="R_right">
+                        <div class="right_img">
+                            <img class="fore"
+                                src="https://gap-cn-node.oss-cn-shanghai.aliyuncs.com/casaba_plus_assets/prod-2020.2.14-1/static/gap-vip1@2x.7c5df525945bc32b474ce2fd76497981.png"
+                                alt="">
+                            <p class="right_p1">183****7156 IS VIP BLUE</p>
+                            <p class="right_p2 ppp">查看二维码</p>
+                        </div>
+                        <div class="right_code">
+                            <p class="code_p1">183****7156 IS VIP BLUE</p>
+                            <img class="back" src="../imgs/rightCode.png" alt="">
+                            <p class="code_p2">序列号：1120021500009687</p>
+                            <p class="code_p3 ppp">查看会员卡</p>
+                        </div>
+                        <script>
+                            var key = true;
+                            $(".R_right").click(function () {
+                                if (key) {
+                                    $(".R_right").addClass('run');
+                                    key = false
+                                }
+                                else {
+                                    $(".R_right").removeClass('run');
+                                    key = true
+                                }
+
+                            })
+                        </script>
+                    </div>
+                </div>
+                <div class="R_four">
+                    <div class="four_item">
+                        <div class="item_icon a1"><i class="iconfont icon-gerenxinxi"></i></div>
+                        <div class="b1">
+                            <p class="item_text1">个人信息</p>
+                            <p class="item_text2">183****7156</p>
+                        </div>
+                    </div>
+                    <div class="four_item">
+                        <div class="item_icon a2"><i class="iconfont icon-dizhibu"></i></div>
+                        <div class="b1">
+                            <p class="item_text1">地址簿</p>
+                            <p class="item_text2">0个</p>
+                        </div>
+                    </div>
+                    <div class="four_item">
+                        <div class="item_icon a3"><i class="iconfont icon-jifen"></i></div>
+                        <div class="b1">
+                            <p class="item_text1">积分</p>
+                            <p class="item_text2">0分</p>
+                        </div>
+                    </div>
+                    <div class="four_item">
+                        <div class="item_icon a4"><i class="iconfont icon-weibiaoti2fuzhi02"></i></div>
+                        <div class="b1">
+                            <p class="item_text1">优惠券</p>
+                            <p class="item_text2">1张</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="myOrder">
+                    <div class="order_table">
+                        <span id="one">我的订单</span>
+                        <span id="two" class="table_span">我的退换货</span>
+                    </div>
+                    <div class="order_text">
+                        <div class="text_myOrder">
+                            <p>您的账户还没订单记录</p>
+                            <div class="text_now">
+                                <span>立即购物</span>
+                            </div>
+                        </div>
+                        <div class="text_myOrder1">
+                            <p>您的账户还没有退换货记录</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right none">
+                <div class="R_title">个人信息</div>
+                <div class="b_text1">
+                    <h3>账户信息</h3>
+                    <p>手机号：183****7156</p>
+                    <div><i class="iconfont icon-xiugai"></i> 修改密码</div>
+                </div>
+                <div class="b_text2">
+                    <div class="text2_mytext">
+                        个人资料
+                        <span>* 完善生日信息可获得积分</span>
+                    </div>
+                    <p class="text2_p1">用户名 <span>(一旦确认无法修改)</span></p>
+                    <input class="text2_input1" type="text" placeholder="请输入您的用户名">
+                    <div class="text2_sex">
+                        <p class="text2_p1">性别<span><span>(一旦确认无法修改)</span></span></p>
+                        <input type="radio"><span class="input_sex">女性</span>
+                        <input class="text2_input2" type="radio"><span class="input_sex">男性</span>
+                    </div>
+                    <div class="text2_birthday">
+                        <p class="text2_p1">生日<span><span>(一旦确认无法修改)</span></span></p>
+                        <select style="margin-left: 0;" name="" id="">
+                            <option value="">年</option>
+                            <option value="">1995</option>
+                            <option value="">1996</option>
+                            <option value="">1997</option>
+                            <option value="">1998</option>
+                            <option value="">1999</option>
+                            <option value="">2000</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">月</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">日</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                            <option value="">13</option>
+                            <option value="">14</option>
+                            <option value="">15</option>
+                            <option value="">16</option>
+                            <option value="">17</option>
+                            <option value="">18</option>
+                            <option value="">19</option>
+                            <option value="">20</option>
+                            <option value="">21</option>
+                            <option value="">22</option>
+                            <option value="">23</option>
+                            <option value="">24</option>
+                            <option value="">25</option>
+                            <option value="">26</option>
+                            <option value="">27</option>
+                            <option value="">28</option>
+                            <option value="">29</option>
+                            <option value="">30</option>
+                            <option value="">21</option>
+                        </select>
+                    </div>
+                    <p class="text2_p1">电子邮箱 <span>(一旦确认无法修改)</span></p>
+                    <input class="text2_input1" type="text" placeholder="请输入电子邮箱">
+                    <div class="text2_sex">
+                        <p class="text2_p1">宝宝性别<span><span>(一旦确认无法修改)</span></span></p>
+                        <input type="radio"><span class="input_sex">女宝宝</span>
+                        <input class="text2_input2" type="radio"><span class="input_sex">男宝宝</span>
+                    </div>
+                    <div class="text2_birthday">
+                        <p class="text2_p1">宝宝生日<span><span>(一旦确认无法修改)</span></span></p>
+                        <select style="margin-left: 0;" name="" id="">
+                            <option value="">年</option>
+                            <option value="">1995</option>
+                            <option value="">1996</option>
+                            <option value="">1997</option>
+                            <option value="">1998</option>
+                            <option value="">1999</option>
+                            <option value="">2000</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">月</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">日</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                            <option value="">13</option>
+                            <option value="">14</option>
+                            <option value="">15</option>
+                            <option value="">16</option>
+                            <option value="">17</option>
+                            <option value="">18</option>
+                            <option value="">19</option>
+                            <option value="">20</option>
+                            <option value="">21</option>
+                            <option value="">22</option>
+                            <option value="">23</option>
+                            <option value="">24</option>
+                            <option value="">25</option>
+                            <option value="">26</option>
+                            <option value="">27</option>
+                            <option value="">28</option>
+                            <option value="">29</option>
+                            <option value="">30</option>
+                            <option value="">21</option>
+                        </select>
+                    </div>
+                    <div class="text2_add">
+                        <p><i class="iconfont icon-add"></i> 增加一个宝宝的信息</p>
+                    </div>
+                    <div class="text2_sex erbao1">
+                        <p class="text2_p1">二宝性别<span><span>(一旦确认无法修改)</span></span></p>
+                        <input type="radio"><span class="input_sex">女宝宝</span>
+                        <input class="text2_input2" type="radio"><span class="input_sex">男宝宝</span>
+                    </div>
+                    <div class="text2_birthday erbao2">
+                        <p class="text2_p1">二宝生日<span><span>(一旦确认无法修改)</span></span></p>
+                        <select style="margin-left: 0;" name="" id="">
+                            <option value="">年</option>
+                            <option value="">1995</option>
+                            <option value="">1996</option>
+                            <option value="">1997</option>
+                            <option value="">1998</option>
+                            <option value="">1999</option>
+                            <option value="">2000</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">月</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                        </select>
+                        <select name="" id="">
+                            <option value="">日</option>
+                            <option value="">1</option>
+                            <option value="">2</option>
+                            <option value="">3</option>
+                            <option value="">4</option>
+                            <option value="">5</option>
+                            <option value="">6</option>
+                            <option value="">7</option>
+                            <option value="">8</option>
+                            <option value="">9</option>
+                            <option value="">10</option>
+                            <option value="">11</option>
+                            <option value="">12</option>
+                            <option value="">13</option>
+                            <option value="">14</option>
+                            <option value="">15</option>
+                            <option value="">16</option>
+                            <option value="">17</option>
+                            <option value="">18</option>
+                            <option value="">19</option>
+                            <option value="">20</option>
+                            <option value="">21</option>
+                            <option value="">22</option>
+                            <option value="">23</option>
+                            <option value="">24</option>
+                            <option value="">25</option>
+                            <option value="">26</option>
+                            <option value="">27</option>
+                            <option value="">28</option>
+                            <option value="">29</option>
+                            <option value="">30</option>
+                            <option value="">21</option>
+                        </select>
+                    </div>
+                    <div class="btn">
+                        <span class="btn1">重置</span>
+                        <span class="btn2">提交</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right none">
+                <div class="R_title">地址簿</div>
+                <div class="place1">
+                    <div class="place_box">
+                        <div class="box1">
+                            <p class="box_p">收件人</p>
+                            <input id="input1" onblur="blurFn(1)" class="box_ipnut" type="text" placeholder="请输入姓名">
+                            <p class="hideText p1">请输入收件人姓名</p>
+                            <p class="hideText p2">输入的收件人姓名有误</p>
+                        </div>
+                        <div class="box2">
+                            <p class="box_p">手机号</p>
+                            <input id="input2" onblur="blurFn(2)" class="box_ipnut" type="text" placeholder="请输入手机号">
+                            <p class="hideText p3">请输入收件人的联系电话</p>
+                            <p class="hideText p4">输入的联系方式有误</p>
+                        </div>
+                        <div class="box3">
+                            <div class="box_shq">
+                                <span>省</span>
+                                <span style="padding-left: 12px;">市</span>
+                                <span style="padding-left: 14px;">区</span>
+                            </div>
+                            <div class="box3_select">
+                                <select id="select1" style="margin-left: 0;" name="" onchange="f()">
+                                    <option value="">请选择省</option>
+                                </select>
+                                <select id="select2" name="" onchange="g()">
+                                    <option value="">请选择市</option>
+                                </select>
+                                <select id="select3" name="">
+                                    <option value="">请选择县/区</option>
+                                </select>
+                            </div>
+                            <p class="hideText pp">请输入地址区域</p>
+                        </div>
+                        <div class="box4">
+                            <p>详细地址</p>
+                            <textarea id="input3" onblur="blurFn(3)" placeholder="请输入详细地址"></textarea>
+                            <p class="hideText1 p5">请输入详细地址</p>
+                            <p class="hideText1 p6">输入的详细地址有误</p>
+                        </div>
+                        <div class="box5">
+                            <input type="checkbox" checked>
+                            <span>设为默认地址</span>
+                            <div><button class="div_btn1">取消</button><button class="div_btn2">保存并使用</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right none">
+                <div class="R_title">积分 <a class="look_rules" href="">查看积分规则</a></div>
+                <div class="nowGrade">
+                    <div class="now_item1">当前可用积分 <span> 0</span><span>本月底即将过期0积分</span><span
+                            class="get_fen">如何获得积分?</span></div>
+                    <p class="now_p1">* 您可重新登录账号，查看最新积分</p>
+                    <div class="now_three">
+                        <span class="three_bottom">全部记录</span>
+                        <span>获取记录</span>
+                        <span>使用记录</span>
+                    </div>
+                    <div class="three_box">
+                        <div>我是全部记录的积分，我们三个不一样呢，11111</div>
+                        <div class="disNone ">我是获取记录的积分，我们三个不一样呢，22222</div>
+                        <div class="disNone">我是使用记录的积分，我们三个不一样呢，33333</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right none">
+                <div class="R_title">优惠券</div>
+                <div class="coupon">
+                    <div class="coupon_box1">
+                        <span id="coupon1">官网优惠券 （1张）</span>
+                        <span id="coupon2" class="bgcColor">门店官网通用优惠券 （0张）</span>
+                    </div>
+                    <div class="use">
+                        <span id="use1" class="bottom_color">可使用</span>
+                        <span id="use2">已使用</span>
+                        <div class="use_rule">优惠券使用规则</div>
+                    </div>
+                    <div class="user">
+                        <span id="use3" class="bottom_color">可使用</span>
+                        <span id="use4">已使用</span>
+                        <div class="use_rule">优惠券使用规则</div>
+                    </div>
+                    <div class="coupon_box2">
+                        <div class="box2_left">
+                            <div class="left_1">
+                                <img src="../imgs/youhuiquan.png" alt="">
+                            </div>
+                            <div class="left_2">我是官网优惠券的已使用哦，我们也不一样，11111</div>
+                        </div>
+                        <div class="box2_right">
+                            <div class="right_1">我是门店优惠券的哦，我们是可使用，22222</div>
+                            <div class="right_2">我也是门店的优惠券呢，我和我兄弟不一样，33333</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right none">
+                <div class="R_title">我的订单</div>
+                <div class="mineOrder">
+                    <div class="five_order">
+                        <span>全部订单</span>
+                        <span class="bgColor">待支付</span>
+                        <span class="bgColor">待发货</span>
+                        <span class="bgColor">待收货</span>
+                        <span class="bgColor">已完成</span>
+                    </div>
+                    <div class="five_box">
+                        <div class="Myorder_item">
+                            <div class="Myorder_item1">
+                                <div class="Myorder_left">
+                                    <p>订单编号：120022009593045370 &nbsp下单时间：2020/02/20 09:59:31</p>
+                                    <div class="left_imgs">
+                                        <img src="https://uxresources.baozun.com/prod/88000136/20200119/C236B4CC7BFB1B8000C19987F0B347B6.jpg?x-oss-process=image/resize,m_fill,w_250,h_325"
+                                            alt="">
+                                        <img src="https://uxresources.baozun.com/prod/88000136/20191114/A3636360570282531F130C637C194BAC.jpg?x-oss-process=image/resize,m_fill,w_250,h_325"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="Myorder_right">
+                                    <p>共2件商品订单金额：￥557.40</p>
+                                    <p>已取消</p>
+                                    <p class="lookOrder_text">查看订单详情</p>
+                                </div>
+                            </div>
+                            <div class="Myorder_item1">
+                                <div class="Myorder_left">
+                                    <p>订单编号：120022009593045370 &nbsp下单时间：2020/02/20 09:59:31</p>
+                                    <div class="left_imgs">
+                                        <img src="https://uxresources.baozun.com/prod/88000136/20190906/B4D82FDD437EB6894C5F9B024A8890C8.JPG?x-oss-process=image/resize,m_fill,w_250,h_325"
+                                            alt="">
+                                        <img src="https://uxresources.baozun.com/prod/88000136/20200215/A9C3BCA30BFE6EA8B553A463E1BE85B7.jpg?x-oss-process=image/resize,m_fill,w_250,h_325"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="Myorder_right">
+                                    <p>共2件商品订单金额：￥557.40</p>
+                                    <p>已取消</p>
+                                    <p class="lookOrder_text">查看订单详情</p>
+                                </div>
+                            </div>
+                            <div class="Myorder_item1">
+                                <div class="Myorder_left">
+                                    <p>订单编号：120022009593045370 &nbsp下单时间：2020/02/20 09:59:31</p>
+                                    <div class="left_imgs">
+                                        <img src="https://uxresources.baozun.com/prod/88000136/20200213/15011A5ECF940E76F15A7B68D1072A8D.jpg?x-oss-process=image/resize,m_fill,w_250,h_325"
+                                            alt="">
+                                        <img src="https://uxresources.baozun.com/prod/88000136/20200215/5DC7508FB6DEDBC0B366A8CFF33EDB3D.jpg?x-oss-process=image/resize,m_fill,w_250,h_325"
+                                            alt="">
+                                    </div>
+                                </div>
+                                <div class="Myorder_right">
+                                    <p>共2件商品订单金额：￥557.40</p>
+                                    <p>已取消</p>
+                                    <p class="lookOrder_text">查看订单详情</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="five_box1">
+                            <p>暂无订单信息111</p>
+                        </div>
+                        <div class="five_box1">
+                            <p>暂无订单信息222</p>
+                        </div>
+                        <div class="five_box1">
+                            <p>暂无订单信息333</p>
+                        </div>
+                        <div class="five_box1">
+                            <p>暂无订单信息444</p>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(".five_order").children().click(function(){
+                        $(this).addClass("bgColor").siblings().removeClass("bgColor")
+                        let index=$(this).index()
+                        $(".five_box").children().eq(index).show().siblings().hide()
+                    })
+                </script>
+            </div>
+            <div class="right none">
+                <div class="R_title">我的退换货</div>
+                <div class="barter">
+                    <div class="barter_box1">
+                        <span id="barter1">退货订单</span>
+                        <span id="barter2" class="bgcColor">换货订单</span>
+                    </div>
+                    <div class="barter_use">
+                        <span id="use11" class="bottom_color">处理中</span>
+                        <span id="use22">已完成</span>
+                    </div>
+                    <div class="barter_user">
+                        <span id="use33" class="bottom_color">处理中</span>
+                        <span id="use44">已完成</span>
+                    </div>
+                    <div class="barter_box2">
+                        <div class="barter_left">
+                            <div class="left_11">
+                                我是官网优惠券的已使用哦，我们也不一样，00000
+                            </div>
+                            <div class="left_22">我是官网优惠券的已使用哦，我们也不一样，11111</div>
+                        </div>
+                        <div class="barter_right">
+                            <div class="right_11">我是门店优惠券的哦，我们是可使用，22222</div>
+                            <div class="right_22">我也是门店的优惠券呢，我和我兄弟不一样，33333</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右边部分 end -->
+    </div>
+    </div>
+
+    <!-- 底部 开始 -->
+    <div id="footer"></div>
+    <!-- 底部 结束 -->
+
+</body>
+
+<script>
+    $("#header").load("../common/header2.html")
+    $("#footer").load("../common/footer.html")
+</script>
+<script>
+    $("#one").click(function () {
+        $(this).removeClass("table_span").siblings().addClass("table_span")
+        $(".text_myOrder").show()
+        $(".text_myOrder1").hide()
+    })
+    $("#two").click(function () {
+        $(this).removeClass("table_span").siblings().addClass("table_span")
+        $(".text_myOrder1").show()
+        $(".text_myOrder").hide()
+    })
+
+
+    // ----------左右相对应 start---------
+
+    function Jump1(val) {
+        $(".left>ul>li").removeClass("change")
+        $(".left>ul>li").eq(val).addClass("change")
+        $(".right").addClass("none")
+        $(".right").eq(val + 1).removeClass("none")
+    }
+    var url = window.location.href
+    var indexs = url.split("type")[1]
+    if (indexs) {
+        $(".left>ul>li").removeClass("change")
+        $(".left>ul>li").eq(indexs).addClass("change")
+        $(".right").addClass("none")
+        $(".right").eq(indexs).removeClass("none")
+    }
+
+
+
+    // ----------左右相对应 end---------
+    $(".text2_add").click(function () {
+        $(this).hide()
+        $(".erbao1").show()
+        $(".erbao2").show()
+    })
+
+    // ------------积分  start--------
+    $(".now_three").children().click(function () {
+        $(this).addClass("three_bottom").siblings().removeClass("three_bottom")
+        $(".three_box").children().eq($(this).index()).removeClass("disNone").siblings().addClass("disNone")
+    })
+    // ------------积分  end--------
+
+    // -------地址簿 省市区联动 加上 input判断 start----------------
+    var t = "";
+    for (let i = 0; i < country.length; i++) {
+        t += `<option value="">` + country[i].name + `</option>`
+    }
+    $("#select1").append(t)
+    function f() {
+        var index = $("#select1").children('option:selected').index() - 1
+        $("#select2").children().not(':eq(0)').remove()
+        var len = country[index].city.length;
+        var q = '';
+        for (let i = 0; i < len; i++) {
+            q += `<option value="">` + country[index].city[i].name + `</option>`
+        }
+        $("#select2").append(q)
+    }
+
+    function g() {
+        var key = $("#select1").children('option:selected').index() - 1
+        var item = $("#select2").children('option:selected').index() - 1
+        var leng = country[key].city[item].area.length;
+        $("#select3").children().not(':eq(0)').remove()
+        var r = '';
+        for (let i = 0; i < leng; i++) {
+            r += `<option value="">` + country[key].city[item].area[i] + `</option>`
+        }
+        $("#select3").append(r)
+    }
+
+    $("#select1").click(function () {
+        $(this).css("color", "black")
+    })
+    $("#select2").click(function () {
+        $(this).css("color", "black")
+    })
+    $("#select3").click(function () {
+        $(this).css("color", "black")
+    })
+
+
+    function blurFn(value) {
+        if (value === 1) {
+            let val = $("#input1").val()
+            if (val === '') {
+                $("#input1").addClass("borderRed")
+                $(".p1").show()
+                $(".p2").hide()
+            }
+            else if (!(val == "余雷" || val == "余大雷" || val == "张婉莹")) {
+                // else if (!(val==1 || val==2||val==3)) {
+                $("#input1").addClass("borderRed")
+                $(".p2").show()
+                $(".p1").hide()
+            }
+            else {
+                $("#input1").removeClass("borderRed")
+                $(".p2").hide()
+                $(".p1").hide()
+            }
+        }
+        else if (value === 2) {
+            let val = $("#input2").val()
+            if (val === '') {
+                $("#input2").addClass("borderRed")
+                $(".p3").show()
+                $(".p4").hide()
+            }
+            else if (!(/^1[34578]\d{9}$/.test(val)) && val !== '') {
+                $("#input2").addClass("borderRed")
+                $(".p4").show()
+                $(".p3").hide()
+            }
+            else {
+                $("#input2").removeClass("borderRed")
+                $(".p4").hide()
+                $(".p3").hide()
+            }
+        }
+        else if (value === 3) {
+            let val = $("#input3").val()
+            if (val === '') {
+                $("#input3").addClass("borderRed")
+                $(".p5").show()
+                $(".p6").hide()
+            }
+            else if (/\d/.test(val) && val !== '') {
+                $("#input3").addClass("borderRed")
+                $(".p6").show()
+                $(".p5").hide()
+            }
+            else {
+                $("#input3").removeClass("borderRed")
+                $(".p6").hide()
+                $(".p5").hide()
+            }
+        }
+    }
+    // -------地址簿 省市区联动 加上 input判断 end----------------
+
+
+
+
+</script>
+<script src="../js/personal.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    // ------优惠券 start------------
+    coupon();
+    // -----优惠券 end--------------
+    // -----退货订单 start-------------
+    barter();
+    // -----退货订单   end---------------------
+
+</script>
+
+</html>

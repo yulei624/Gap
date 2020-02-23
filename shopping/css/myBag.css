@@ -1,0 +1,487 @@
+.wraper{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 标题 我的购物袋 start */
+.title{
+    font-size: 24px;
+    height: 27px;
+    line-height: 27px;
+}
+.title>.many{
+    font-size: 16px;
+    margin-left: 16px;
+}
+/* 标题 我的购物袋 end */
+
+/* --------------左边部分  开始------------------ */
+.myShoping{
+    width: 843px;
+    margin-top: 30px;
+    float: left;
+    height: 522px;
+}
+/* 商品属性 数量 价格 start */
+.myShoping>.mySh1{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+.myShoping>.mySh1>.input1{
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+}
+.myShoping>.mySh1>span{
+    display: inline-block;
+    margin-left: 260px;
+}
+.myShoping>.mySh1>.all1{
+    margin-left: 10px;
+}
+.myShoping>.mySh1>.all2{
+    margin-left: 120px;
+}
+/* 商品属性 数量 价格 end */
+
+/* CAP 小logo start */
+.myShoping>.mySh2{
+    padding: 0 14px;
+    background-color: rgb(245,245,245);
+    height: 51px;
+    line-height: 51px;
+    border-top: 1px solid #666;
+}  
+.myShoping>.mySh2>img{
+    width: 26px;
+    height: 20px;
+}
+/* CAP 小logo end */
+
+/* 两件商品的样式 start */
+.trueShop1{
+    display: flex;
+    margin: 0 12px 0 24px;
+    padding: 20px 0;
+}
+.trueShop1>input{
+    width: 16px;
+    height: 16px;
+    float: left;
+    cursor: pointer;
+}
+.trueShop1>img{
+    width: 130px;
+    height: 173px;
+    margin-left: 15px;
+}
+.trueShop1>ul{
+    height: 175px;
+    margin-left: 15px;
+    font-size: 14px;
+}
+.trueShop1>ul>li{
+    height: 14px;
+    line-height: 14px;
+}
+.trueShop1>ul>li:nth-child(1){
+    margin-bottom: 6px;
+}
+.trueShop1>ul>li:nth-child(2){
+    margin-bottom: 24px;
+    width: 270px;
+}
+.trueShop1>ul>li:nth-child(3){
+    margin-bottom: 8px;
+}
+.trueShop1>ul>li:nth-child(4){
+    margin-bottom: 30px;
+}
+.trueShop1>ul>li:nth-child(5){
+    margin-bottom: 20px;
+}
+.yuanjia{
+    text-decoration: line-through;
+    font-size: 12px;
+    color: #666;
+    margin-left: 10px;
+}
+/* 两件商品的样式 end */
+
+
+/* 两件商品的计数器  start */
+/* 第一件 */
+.number{
+    margin-left: 50px;
+}
+.number>.threeSp{
+    padding-bottom: 40px;
+    padding-top: 10px;
+    
+}
+.threeBox{
+    display: none;
+    position: fixed;
+    top: 45%;
+    left: 46%;
+    text-align: center;
+    line-height: 26px;
+    height: 26px;
+    color: #fff;
+    border-radius: 3px;
+    width: 200px;
+    background-color: rgb(0,0,0,0.8);
+}
+.number>.threeSp>span{
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid rgb(217, 217, 217);
+}
+.number>.threeSp>span:nth-child(2){
+    width: 42px;
+    border-left: 0;
+    border-right: 0;
+}
+.total{
+    margin-left: 135px;
+}
+.remove{
+    margin-left: 30px;
+    cursor: pointer;
+}
+.change{
+    cursor: pointer;
+}
+/* 第二件 */
+.number1{
+    margin-left: 50px;
+}
+.number1>.threeSp1{
+    padding-bottom: 40px;
+    padding-top: 10px;
+}
+.number1>.threeSp1>span{
+    cursor: pointer;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid rgb(217, 217, 217);
+}
+.number1>.threeSp1>span:nth-child(2){
+    width: 42px;
+    border-left: 0;
+    border-right: 0;
+}
+/* 两件商品的计数器 end */
+
+/* --------------左边部分  结束------------------ */
+
+
+
+/* --------------右边部分 开始------------------ */
+.rightBox{
+    width: 302px;
+    background-color: rgb(245,245,245);
+    float: right;
+    padding: 16px;
+    margin-top: 30px;
+}
+.rightBox>.rb1{
+    font-size: 18px;
+    height: 21px;
+    line-height: 21px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+}
+.rightBox>.rb1>span{
+    float: right;
+    font-size: 12px;
+    height: 14px;
+    line-height: 22px;
+}
+.rightBox>.rb2{
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    margin-bottom: 16px;
+    margin-top: 15px;
+}
+.rightBox>.rb2>span{
+   float: right;
+}
+.rightBox>.rb3{
+    font-size: 14px;
+    height: 16px;
+    line-height: 16px;
+    margin-bottom: 16px;
+}
+.rightBox>.rb3>span{
+   float: right;
+}
+.rightBox>.rb4{
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ccc;
+}
+.rightBox>.rb4>input{
+    width: 216px;
+    height: 28px;
+    padding: 0 12px;
+    outline-style: none;
+    border: 1px solid #ccc;
+}
+.rightBox>.rb4>input::-webkit-input-placeholder{
+    color: #ccc;
+}
+.rightBox>.rb4>span{
+    width: 50px;
+    height: 29px;
+    line-height: 25px;
+    text-align: center;
+    color: #ccc;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+.rightBox>.rb5{
+    font-size: 14px;
+    height: 21px;
+    margin: 20px 0 25px;
+
+}
+.rightBox>.rb5>span{
+    float: right;
+    font-size: 18px;
+}
+.rightBox>.rb6{
+
+}
+.rightBox>.rb6>button{
+    width: 308px;
+    height: 38px;
+    padding:0 24px;
+    border: 0;
+    border-radius: 2px;
+    background-color: rgb(217,217,217);
+    color: #fff;
+    cursor: pointer;
+}
+.rightBox>.rb7{
+    margin-top: 20px;
+}
+.rightBox>.rb7>button{
+    cursor: pointer;
+    width: 306px;
+    height: 36px;
+    padding:0 24px;
+    border: 0;
+    border-radius: 2px;
+    border: 1px solid black;
+    background-color:#fff;
+    color: rgb(18,33,71);
+}
+
+.last{
+    float: right;
+    background-color: #fff;
+    margin-top: 34px;
+    width: 298px;
+    padding: 21px 16px 24px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+}
+.last>.last1{
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 15px;
+}
+.last>.last1:nth-child(1){
+    margin-top: 0;
+}
+.last>.last1>.aaa>span{
+    float: right;
+}
+.last>.last1>.aaa>span:nth-child(2){
+    display: none;
+}
+.aaa>span{
+    cursor: pointer;
+}
+.last>.last1>.show1{
+    font-size: 14px;
+    display: none;
+}
+.last>.last1>.show1>p>i{
+    margin-left: 10px;
+}
+.last>.last1>.show1>p>span:nth-child(3){
+    color: #666;
+}
+.last>.last1>.show1>p:nth-child(1){
+    margin: 20px 0;
+}
+.last>.last1>.show1>p:nth-child(2){
+    margin: 20px 0 10px 30px;
+}
+.last>.last1>.show1>p:nth-child(3){
+    margin: 0 0 0 30px;
+}
+.fwTime{
+    color: #666;
+}
+
+.show2{
+    margin: 20px 0 0 0;
+    padding-bottom: 20px;
+    display: none;
+}
+.show2>span{
+    margin-left: 40px;
+    float: left;
+}
+.show2>span:nth-child(1){
+    margin-left: 0;
+}
+.show3{
+    margin-top: 14px;
+    display: none;
+}
+.show3>p{
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------右边部分 结束------------------ */
+
+
+/* 商品展示 一 */
+
+.changeOther{
+    position: relative;
+}
+.changeOther_children{
+    display: none;
+    width: 622px;
+    height: 250px;
+    top: -55px;
+    border: 1px solid rgb(217, 217, 217);
+    padding: 16px 0 16px 16px;
+    position: absolute;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.posi{
+    display: none;
+    font-size: 20px;
+    position: fixed;
+    left: 42%;
+    top: 36%;
+    width: 120px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    height: 30px;
+    background-color: rgb(0,0,0,0.5);
+}
+.children_item1{
+    font-size: 14px;
+    color: #999;
+    line-height: 19px;
+
+}
+.children_item1>div{
+    width: 26px;
+    height: 26px;
+    padding: 2px;
+    margin-top: 12px;
+   cursor: pointer;
+}
+.children_item1>span:nth-child(2){
+    color: #000;
+}
+.smallImg_border{
+    border: 1px solid black;
+}
+.children_item2{
+    margin-top: 26px;
+}
+.children_item2>ul>li{
+    display: inline-block;
+    width: 178px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid rgb(217, 217, 217);
+    margin-left: 24px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.children_item2>ul>li:nth-child(3n+1){
+    margin-left: 0;
+}
+.rgb1{
+    color: rgb(18,33,71)!important;
+    border: 1px solid rgb(18,33,71)!important;
+}
+.children_item3{
+    margin-top: 32px;
+}
+.children_item3>button{
+    font-size: 14px;
+    width: 180px;
+    height: 32px;
+    border: 1px solid rgb(18,33,71);
+    padding: 0 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.item3_btn1{
+    background-color: #fff;
+}
+.item3_btn2{
+    margin-left: 24px;
+    color:  #fff;
+    background-color: rgb(18,33,71);
+}
+
+.item3_btn2:hover{
+    background-color:rgb(4,47,106) ;
+}
+
+.hhh{
+    background-color: rgb(18,33,71)!important;
+}
+
+
+
+
+
+
